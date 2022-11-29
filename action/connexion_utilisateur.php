@@ -15,11 +15,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     if ($username !== "" && $password !== "") {
         //Verifier si le mot de passe est le même que celui de la BDD
-        $mdp =$pdo->prepare('SELECT `password` FROM user WHERE username = ?');
-        $mdp->execute(array($username));
-        $mdp_end = $mdp->fetch();
-        var_dump($mdp_end);
-        if($mdp_end === $password){
+        $mdp = $bdd->prepare('SELECT `password` FROM users WHERE username = ?');
+            $mdp->execute(array($username));
+            $hasheur = $mdp->fetch();
+            $hash = $hasheur['password'];
+            $don = password_verify($password, $hash);
+        if($don ){
             $reponse = $pdo->query('SELECT * FROM user WHERE username = "' . $username . '"');
 
             $donnees = $reponse->rowCount();
