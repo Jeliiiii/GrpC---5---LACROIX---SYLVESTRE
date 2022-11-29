@@ -9,20 +9,20 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = $_POST['password'];
 
     if ($username !== "" && $email !== "" && $password !== "") {
-        
+
         if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])) {
             try {
                 $reponse = NULL;
-        
+
                 $username = $_POST['username'];
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $grade = $_POST['email'];
-        
+
                 if (!$pdo) {
                     header('Location: ../connexion.php'); // Connexion impossible
                     die('connexion impossible');
                 }
-        
+
                 try {
                     $reponse = $pdo->prepare('INSERT INTO `user`(`username`, `password`, `email`) VALUES (?,?,?)');
                     $reponse->execute(array($username, $password, $email));
@@ -38,10 +38,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 header("Location: ../connexion.php");
             }
         }
-        } else {
-            header('Location: ../connexion.php?mauvais_mdp'); // utilisateur ou mot de passe incorrect
-        }   
-    }else {
+    } else {
+        header('Location: ../connexion.php?mauvais_mdp'); // utilisateur ou mot de passe incorrect
+    }
+} else {
     header('Location: ../connexion.php?argument_vide'); // utilisateur ou mot de passe vide
 }
 

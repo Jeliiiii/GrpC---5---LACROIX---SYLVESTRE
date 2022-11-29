@@ -16,17 +16,17 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     if ($username !== "" && $password !== "") {
         //Verifier si le mot de passe est le même que celui de la BDD
         $mdp = $pdo->prepare('SELECT `password` FROM users WHERE username = ?');
-            $mdp->execute(array($username));
-            $hasheur = $mdp->fetch();
-            $hash = $hasheur['password'];
-            $don = password_verify($password, $hash);
-        if($don == 1){
+        $mdp->execute(array($username));
+        $hasheur = $mdp->fetch();
+        $hash = $hasheur['password'];
+        $don = password_verify($password, $hash);
+        if ($don == 1) {
             $reponse = $pdo->query('SELECT * FROM user WHERE username = "' . $username . '"');
 
             $donnees = $reponse->rowCount();
 
-            if ($donnees > 0){ // nom d'utilisateur et mot de passe correctes
-            
+            if ($donnees > 0) { // nom d'utilisateur et mot de passe correctes
+
                 $_SESSION['username'] = $username;
 
                 //récupération de la fonction de l'utilisateur, fait parti de la table users, 3e colonne
@@ -37,17 +37,17 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
                 if ($admin['admin'] == 1) {
                     header('Location: ../index.php');
-                } elseif ($admin['admin'] ==0) {
+                } elseif ($admin['admin'] == 0) {
                     header('Location: ../index.php');
-                }else {
+                } else {
                     header('Location : ../connexion.php?grade_inexistant');
                     echo "Veuillez vérifier l'existence de votre utilisateur";
                 }
             } else {
                 header('Location: ../connexion.php?mauvais_mdp'); // utilisateur ou mot de passe incorrect
-            }   
-        }else {
-        header('Location: ../connexion.php?argument_vide'); // utilisateur ou mot de passe vide
+            }
+        } else {
+            header('Location: ../connexion.php?argument_vide'); // utilisateur ou mot de passe vide
         }
     }
 }

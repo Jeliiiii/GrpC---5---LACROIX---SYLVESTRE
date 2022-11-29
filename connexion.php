@@ -9,19 +9,19 @@
 
 <body>
 
-<?php
-    echo "<h1><mark>";
-    if (isset($_SESSION['res'])) {
-        echo $_SESSION['res'];
-        $_SESSION['res'] = " ";
-        }
-    echo "</mark></h1>";
+    <?php
+echo "<h1><mark>";
+if (isset($_SESSION['res'])) {
+    echo $_SESSION['res'];
+    $_SESSION['res'] = " ";
+}
+echo "</mark></h1>";
 ?>
 
     <div id="container">
         <!-- zone de connexion -->
 
-        <form action="action/connexion_utilisateur.php"  method="POST">
+        <form action="action/connexion_utilisateur.php" method="POST">
             <h1>Connexion</h1>
 
             <label><b>Nom d'utilisateur</b></label>
@@ -38,7 +38,7 @@
     <div id="container">
         <!-- zone de connexion -->
 
-        <form action="action/inscription_utilisateur.php"  method="POST">
+        <form action="action/inscription_utilisateur.php" method="POST">
             <h2>Inscription</h2>
 
             <label><b>Email</b></label>

@@ -4,13 +4,15 @@
 <head>
     <meta charset="utf-8">
     <title>G.Tech 1 - Nos projets</title>
-    <meta name="description" content="Nous allons vous parler de nos expériences, et nos projets au sein de l'école Gaming Campus.">
+    <meta name="description"
+        content="Nous allons vous parler de nos expériences, et nos projets au sein de l'école Gaming Campus.">
     <link rel="icon" type="image/png" sizes="16x16" href="img/logo-gc.png">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Urbanist:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Urbanist:wght@200&display=swap"
+        rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen">
     <link type="text/css" rel="stylesheet" href="css/style-matthieu.css">
@@ -59,8 +61,10 @@
         <div class="row">
             <div class="col offset-s3 s3 offset-m3 m3 offset-l3 l3">
                 <div class="linkedin" id="preambule">
-                    <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="matthieu-sylvestre-44588920a" data-version="v1">
-                        <a class="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/matthieu-sylvestre-44588920a?trk=profile-badge"></a>
+                    <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="medium" data-theme="dark"
+                        data-type="HORIZONTAL" data-vanity="matthieu-sylvestre-44588920a" data-version="v1">
+                        <a class="badge-base__link LI-simple-link"
+                            href="https://fr.linkedin.com/in/matthieu-sylvestre-44588920a?trk=profile-badge"></a>
                     </div>
                 </div>
             </div>
@@ -78,7 +82,8 @@
             <div class="carousel-item"><img src="img/discord.jpg" alt="Apparence discord matthieu"></div>
             <div class="carousel-item"><img src="img/statistiques-chaine.jpg" alt="Statistiques chaine matthieu"></div>
             <div class="carousel-item"><img src="img/profil-speedruncom.jpg" alt="profil speedrun.com matthieu"></div>
-            <p>Quelques images de mon projet et ses statistiques. <br> <br> Mon ambition: <br> - Monter encore en statistiques <br> - Avoir une plus grande communauté et plus de records</p>
+            <p>Quelques images de mon projet et ses statistiques. <br> <br> Mon ambition: <br> - Monter encore en
+                statistiques <br> - Avoir une plus grande communauté et plus de records</p>
         </div>
     </div>
 
@@ -98,7 +103,9 @@
             <div class="carousel-item"><img src="img/gaming-campus2.jpg" alt="Image Logo Gaming Campus">
             </div>
             <div class="carousel-item"><img src="img/gaming-campus1.jpg" alt="Image Locaux Gaming Campus"></div>
-            <p>Quelques images des lieux d'études que j'ai fréquenté. <br> <br> Mon parcours: <br> - 2 Baccalauréat (SI , STI) au Lycée Denis Diderot - Langres <br> - BTS ( SNIR ) au Lycée Polyvalent Les Lombards<br> - Préparation d'un bachelor jeux vidéos
+            <p>Quelques images des lieux d'études que j'ai fréquenté. <br> <br> Mon parcours: <br> - 2 Baccalauréat (SI
+                , STI) au Lycée Denis Diderot - Langres <br> - BTS ( SNIR ) au Lycée Polyvalent Les Lombards<br> -
+                Préparation d'un bachelor jeux vidéos
                 au Gaming Campus Lyon</p>
         </div>
     </div>
