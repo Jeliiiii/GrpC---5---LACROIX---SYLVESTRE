@@ -1,0 +1,99 @@
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    height: 100px;
+}
+
+.nav-extended {
+    background-color: black !important;
+    font-family: 'Urbanist', cursive;
+    font-size: 30px;
+    font-weight: 50;
+}
+
+.sidenav {
+    background-color: rgb(255, 255, 255) !important;
+    font-family: 'Urbanist', cursive;
+}
+
+.brand-logo img {
+    width: 75px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Urbanist', cursive;
+    font-weight: 50;
+    color: rgb(0, 0, 0);
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Urbanist', cursive;
+    font-weight: 50;
+    color: white;
+    background-color: #000000;
+    margin: 0;
+}
+
+.cards {
+    width: auto;
+    margin-top: 48px;
+    font-family: 'Urbanist', cursive;
+    color: rgb(255, 255, 255);
+}
+
+.cards .card {
+    background-color: #000000;
+}
+
+.card .card-action a {
+    color: #e96069 !important;
+}
+
+.cards .parallax-container {
+    height: auto;
+    min-height: 500px;
+}
+
+.video-chad {
+    text-align: center;
+    margin-top: 48px;
+    background-color: black;
+    display: none;
+    width:100%;
+
+}
+
+.video-chad video{
+    height:900px;
+}
+
+.carousel {
+    width: auto !important;
+    height: 900px;
+    min-height: 700px;
+    background-color: #000000;
+}
+
+.carousel p {
+    text-align: center;
+    margin-top: 570px;
+    font-family: 'Urbanist', cursive;
+    font-weight: 50;
+    font-size: 30px;
+    color: white;
+}
+
+.carousel .carousel-item {
+    height: 700px;
+    width: 700px;
+}
+
+.parallax-container .form-button{
+    text-align: center;
+    margin-top: 200px;
+}
