@@ -15,7 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     if ($username !== "" && $password !== "") {
         //Verifier si le mot de passe est le même que celui de la BDD
-        $mdp = $bdd->prepare('SELECT `password` FROM users WHERE username = ?');
+        $mdp = $pdo->prepare('SELECT `password` FROM users WHERE username = ?');
             $mdp->execute(array($username));
             $hasheur = $mdp->fetch();
             $hash = $hasheur['password'];

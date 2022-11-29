@@ -35,7 +35,7 @@
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
                     <li><a href="eliott-projects.php">Projets Eliott</a></li>
-                    <li><a href="action/connexion_utilisateur.php">Connexion</a></li>
+                    <li><a href="connexion.php">Connexion</a></li>
                 </ul>
             </div>
             <div class="nav-content">
