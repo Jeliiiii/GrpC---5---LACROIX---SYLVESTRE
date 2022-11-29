@@ -44,5 +44,4 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 } else {
     header('Location: ../connexion.php?argument_vide'); // utilisateur ou mot de passe vide
 }
-
 ?>
