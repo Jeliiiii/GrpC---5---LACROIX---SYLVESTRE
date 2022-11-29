@@ -4,63 +4,55 @@ ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
 
-session_start();
+//session_start();
 
 ?>
 
 <?php
 
-    if (isset($_POST['username']) && isset($_POST['password'])) {
+if (isset($_POST['username']) && isset($_POST['password'])) {
 
-        require "database.php";
-        $reponse = " ";
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+    require "database.php";
+    $reponse = " ";
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-        if ($username !== "" && $password !== "") {
-            //Verifier si le boolean est true
-            $mdp = $bdd->prepare('SELECT `password` FROM users WHERE username = ?');
-            $mdp->execute(array($username));
-            $hasheur = $mdp->fetch();
-            $hash = $hasheur['password'];
-            $don = password_verify($password, $hash);
+    if ($username !== "" && $password !== "") {
+        //Verifier si le mot de passe est le même que celui de la BDD
+        $mdp =$pdo->prepare('SELECT `password` FROM user WHERE username = ?');
+        $mdp->execute(array($username));
+        $mdp_end = $mdp->fetch();
+        if($mdp_end == $password)
+            $reponse = $pdo->query('SELECT * FROM user WHERE username = "' . $username . '"');
 
-            if ($don == 1) {
-                $reponse = $bdd->query('SELECT * FROM users WHERE username = "' . $username . '"');
+            $donnees = 1
 
-                $donnees = $reponse->rowCount();
+            if ($donnees > 0) // nom d'utilisateur et mot de passe correctes
+            {
+                $_SESSION['username'] = $username;
 
-                if ($donnees > 0) // nom d'utilisateur et mot de passe correctes
-                {
-                    $_SESSION['username'] = $username;
+                //récupération de la fonction de l'utilisateur, fait parti de la table users, 3e colonne
+                $reponse2 = $bdd->prepare('SELECT admin FROM user WHERE username =?');
+                $reponse2->execute(array($username));
+                $admin = $reponse2->fetch();
+                $_SESSION['admin'] = $grade['admin'];
 
-                    //récupération de la fonction de l'utilisateur, fait parti de la table users, 3e colonne
-                    $reponse2 = $bdd->prepare('SELECT grade FROM users WHERE username =?');
-                    $reponse2->execute(array($username));
-                    $grade = $reponse2->fetch();
-                    $_SESSION['grade'] = $grade['grade'];
-
-                    if ($grade['grade'] === "Opérateur") {
-                        header('Location: interfaces/mod/mod_home.php');
-                    } elseif ($grade['grade'] === "Administrateur") {
-                        header('Location: interfaces/admin/admin_home.php');
-                    } elseif ($grade['grade'] === "Utilisateur") {
-                    header('Location: interfaces/user/user_home.php'); 
-                    }else {
-                        header('Location : connexion.php');
-                        echo "Veuillez attribuer un grade a votre utilisateur";
-                    }
-                } else {
-                    header('Location: index.html?erreur=1'); // utilisateur ou mot de passe incorrect
+                if ($grade['admin'] == 1) {
+                    header('Location: ../index.php');
+                } elseif ($grade['admin'] ==0) {
+                    header('Location: ../index.php');
+                }else {
+                    header('Location : connexion.php');
+                    echo "Veuillez vérifier l'existence de votre utilisateur";
                 }
             } else {
-                header('Location: index.html?erreur=2'); // utilisateur ou mot de passe incorrect
-            }
-        } else {
-            header('Location: index.html?erreur=3'); // utilisateur ou mot de passe vide
-        }
+                header('Location: index.php?erreur=1'); // utilisateur ou mot de passe incorrect
+        }   
+    }else {
+        header('Location: index.php?erreur=2'); // utilisateur ou mot de passe vide
     }
-    ?>
+}
+?>
 
 <!DOCTYPE HTML>
 <html lang="fr">
