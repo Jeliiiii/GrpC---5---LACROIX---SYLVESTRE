@@ -20,7 +20,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             $hasheur = $mdp->fetch();
             $hash = $hasheur['password'];
             $don = password_verify($password, $hash);
-        if($don ){
+        if($don == 1){
             $reponse = $pdo->query('SELECT * FROM user WHERE username = "' . $username . '"');
 
             $donnees = $reponse->rowCount();
