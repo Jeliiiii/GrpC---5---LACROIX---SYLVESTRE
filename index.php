@@ -5,6 +5,8 @@ error_reporting(-1);
 session_start();
 ?>
 
+<?php require_once "action/database.php"; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -59,6 +61,7 @@ session_start();
         <li><a href="index.php">Accueil</a></li>
         <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
         <li><a href="eliott-projects.php">Projets Eliott</a></li>
+        <li><a href="connexion.php">Connexion</a></li>
     </ul>
 
 
@@ -183,12 +186,10 @@ session_start();
         </div>
     </div>
 
-
-
     <!--JavaScript at end of body for optimized loading-->
     <script src="js/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/script.js"></script>
-</body>
 
+</body>
 </html>

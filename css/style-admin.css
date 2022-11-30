@@ -1,0 +1,24 @@
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    height: 100px;
+}
+
+.nav-extended {
+    background-color: black !important;
+    font-family: 'Urbanist', cursive;
+    font-size: 30px;
+    font-weight: 50;
+}
+
+.sidenav {
+    background-color: rgb(255, 255, 255) !important;
+    font-family: 'Urbanist', cursive;
+}
+
+.brand-logo img {
+    width: 75px;
+    padding: 10px;
+}
