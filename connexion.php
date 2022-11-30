@@ -4,7 +4,7 @@
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <title>Connexion</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
 </head>
 
 <body>
@@ -17,6 +17,9 @@ if (isset($_SESSION['res'])) {
 }
 echo "</mark></h1>";
 ?>
+
+
+
 
     <div id="container">
         <!-- zone de connexion -->
