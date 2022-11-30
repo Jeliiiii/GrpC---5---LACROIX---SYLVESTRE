@@ -20,7 +20,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $hasheur = $mdp->fetch();
         $hash = $hasheur['password'];
         $don = password_verify($password, $hash);
-        if ($don == 1) {
+        if ($don == 1){
             $reponse = $pdo->query('SELECT * FROM user WHERE username = "' . $username . '"');
 
             $donnees = $reponse->rowCount();
@@ -47,6 +47,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 header('Location: ../connexion.php?mauvais_mdp'); // utilisateur ou mot de passe incorrect
             }
         } else {
+            $_SESSION['res'] = $don;
             header('Location: ../connexion.php?argument_vide'); // utilisateur ou mot de passe vide
         }
     }
