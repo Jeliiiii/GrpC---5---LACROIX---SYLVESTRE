@@ -15,7 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     if ($username !== "" && $password !== "") {
         //Verifier si le mot de passe est le même que celui de la BDD
-        $mdp = $pdo->prepare('SELECT `password` FROM users WHERE username = ?');
+        $mdp = $pdo->prepare('SELECT `password` FROM user WHERE username = ?');
         $mdp->execute(array($username));
         $hasheur = $mdp->fetch();
         $hash = $hasheur['password'];
@@ -30,7 +30,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 $_SESSION['username'] = $username;
 
                 //récupération de la fonction de l'utilisateur, fait parti de la table users, 3e colonne
-                $reponse2 = $bdd->prepare('SELECT admin FROM user WHERE username =?');
+                $reponse2 = $pdo->prepare('SELECT * FROM user WHERE username =?');
                 $reponse2->execute(array($username));
                 $admin = $reponse2->fetch();
                 $_SESSION['admin'] = $admin['admin'];
@@ -44,6 +44,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                     echo "Veuillez vérifier l'existence de votre utilisateur";
                 }
             } else {
+                $_SESSION['res'] = "mot de passe incorrect";
                 header('Location: ../connexion.php?mauvais_mdp'); // utilisateur ou mot de passe incorrect
             }
         } else {

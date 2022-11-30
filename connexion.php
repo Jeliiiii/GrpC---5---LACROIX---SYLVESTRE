@@ -1,25 +1,32 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE HTML>
 <html lang="fr">
 
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <title>Connexion</title>
-    <link rel="stylesheet" href="../css/style2.css">
+    <link type="text/css" rel="stylesheet" href="css/style2.css">
+
 </head>
 
 <body>
+    <nav>
+        <div class="nav-content">
+                <li><a href="index.php">Accueil</a></li>
+        </div>
+    </nav>
 
     <?php
-echo "<h1><mark>";
-if (isset($_SESSION['res'])) {
-    echo $_SESSION['res'];
-    $_SESSION['res'] = " ";
-}
-echo "</mark></h1>";
-?>
-
-
-
+    echo "<h1><mark>";
+    if (isset($_SESSION['res'])) {
+        echo $_SESSION['res'];
+        $_SESSION['res'] = " ";
+    }
+    echo "</mark></h1>";
+    ?>
 
     <div id="container">
         <!-- zone de connexion -->
@@ -45,7 +52,7 @@ echo "</mark></h1>";
             <h2>Inscription</h2>
 
             <label><b>Email</b></label>
-            <input type="text" placeholder="Entrez votre email" name="email" required>
+            <input type="email" placeholder="Entrez votre email" name="email" required>
 
             <label><b>Nom d'utilisateur</b></label>
             <input type="text" placeholder="Entrez votre nom d'utilisateur" name="username" required>

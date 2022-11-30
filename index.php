@@ -165,7 +165,7 @@
                             placeholder="Votre Message:"></textarea>
                     </p>
                     <div class="button-env">
-                        <a href="https://matias.ma/nsfw/" class="waves-effect waves-light btn" rel="nofollow"
+                        <a href="" class="waves-effect waves-light btn" rel="nofollow"
                             target="_blank"><i class="material-icons left">done</i>Envoyer</a>
                     </div>
                 </form>
