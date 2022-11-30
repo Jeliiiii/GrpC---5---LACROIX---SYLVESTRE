@@ -42,8 +42,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                     $_SESSION['res'] ="Connexion utilisateur";
                     header('Location: ../index.php');
                 } else {
+                    $_SESSION['res'] = NULL;
+                    $_SESSION['res'] = "Aucun grade attribué";
                     header('Location : ../connexion.php?grade_inexistant');
-                    echo "Veuillez vérifier l'existence de votre utilisateur";
                 }
             } else {
                 $_SESSION['res'] = NULL;
