@@ -33,10 +33,7 @@ session_start();
 </head>
 
 <body>
-<?php 
-if (!isset($_SESSION['username']) && !isset($_SESSION['admin']))
-{
-    ?>
+    <!--Navbar-->
     <div class="navbar-fixed">
         <nav class="nav-extended">
             <div class="nav-wrapper">
@@ -44,72 +41,34 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['admin']))
                 <a href="#mobile-demo" data-target="mobile-demo" class="sidenav-trigger"><i
                         class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="index.php">Accueil</a></li>
-                    <li><a href="connexion.php">Connexion</a></li>
-                </ul>
-            </div>
-            <div class="nav-content">
-                <ul class="tabs tabs-transparent">
-                    <li class="tab"><a href="#title-h1">Présentation</a></li>
-                    <li class="tab"><a href="#projects">Projet commun</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
 
-    <?php
-    }elseif (isset($_SESSION['username']) && isset($_SESSION['admin']) && $_SESSION['admin']==0){ 
-    ?>
-        <!--Navbar-->
-    <div class="navbar-fixed">
-        <nav class="nav-extended">
-            <div class="nav-wrapper">
-                <a href="#brand-logo" class="brand-logo"><img src="img/logo-gc.png" alt="Logo Gaming Campus"></a>
-                <a href="#mobile-demo" data-target="mobile-demo" class="sidenav-trigger"><i
-                        class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="index.php">Accueil</a></li>
+
+                    <?php if (isset($_SESSION['username']) && isset($_SESSION['password']) && $_SESSION['admin']==0 || $_SESSION['admin']==1){  ?>
                     <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
                     <li><a href="eliott-projects.php">Projets Eliott</a></li>
-                    <li><a href="action/deconnexion.php">Deconnexion</a></li>
-                </ul>
-            </div>
-            <div class="nav-content">
-                <ul class="tabs tabs-transparent">
-                    <li class="tab"><a href="#title-h1">Présentation</a></li>
-                    <li class="tab"><a href="#projects">Projet commun</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+                    <?php }?>
 
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
-        <li><a href="eliott-projects.php">Projets Eliott</a></li>
-        <li><a href="action/deconnexion.php">Deconnexion</a></li>
-    </ul>
-
-<?php }elseif (isset($_SESSION['username']) && isset($_SESSION['admin']) && $_SESSION['admin']==1){ ?>
-        <!--Navbar-->
-        <div class="navbar-fixed">
-        <nav class="nav-extended">
-            <div class="nav-wrapper">
-                <a href="#brand-logo" class="brand-logo"><img src="img/logo-gc.png" alt="Logo Gaming Campus"></a>
-                <a href="#mobile-demo" data-target="mobile-demo" class="sidenav-trigger"><i
-                        class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="index.php">Accueil</a></li>
-                    <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
-                    <li><a href="eliott-projects.php">Projets Eliott</a></li>
+                    <?php if (isset($_SESSION['username']) && isset($_SESSION['password']) && $_SESSION['admin']==1){ ?>
                     <li><a href="admin/admin.php">Administration</a></li>
+                    <?php } ?>
+
+                    <?php if (isset($_SESSION['username']) && isset($_SESSION['password'])){ ?>
                     <li><a href="action/deconnexion.php">Deconnexion</a></li>
+                    <?php } ?>
+
+                    <?php if (!isset($_SESSION['username']) && !isset($_SESSION['password']) && !isset($_SESSION['admin'])){ ?>
+                        <li><a href="action/Connexion.php">Connexion</a></li>
+                    <?php } ?>
+
                 </ul>
             </div>
             <div class="nav-content">
                 <ul class="tabs tabs-transparent">
+                    <?php if(isset($_SESSION['username']) && isset($_SESSION['admin']) && $_SESSION['admin']==0 || $_SESSION['admin']==1){  ?>
                     <li class="tab"><a href="#title-h1">Présentation</a></li>
                     <li class="tab"><a href="#projects">Projet commun</a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </nav>
@@ -117,12 +76,16 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['admin']))
 
     <ul class="sidenav" id="mobile-demo">
         <li><a href="index.php">Accueil</a></li>
+        <?php if (isset($_SESSION['username']) && isset($_SESSION['password']) && $_SESSION['admin']==0 || $_SESSION['admin']==1){  ?>
         <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
         <li><a href="eliott-projects.php">Projets Eliott</a></li>
+        <?php } ?>
+        <?php if (isset($_SESSION['username']) && isset($_SESSION['password']) && $_SESSION['admin']==1){ ?>
         <li><a href="admin/admin.php">Administration</a></li>
+        <?php } ?>
         <li><a href="action/deconnexion.php">Deconnexion</a></li>
     </ul>
-    <?php } ?>
+
 
     <div class="video-chad" id="video-chad">
         <video controls>
@@ -234,8 +197,8 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['admin']))
                             placeholder="Votre Message:"></textarea>
                     </p>
                     <div class="button-env">
-                        <a href="" class="waves-effect waves-light btn" rel="nofollow"
-                            target="_blank"><i class="material-icons left">done</i>Envoyer</a>
+                        <a href="" class="waves-effect waves-light btn" rel="nofollow" target="_blank"><i
+                                class="material-icons left">done</i>Envoyer</a>
                     </div>
                 </form>
             </div>
@@ -251,4 +214,5 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['admin']))
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
