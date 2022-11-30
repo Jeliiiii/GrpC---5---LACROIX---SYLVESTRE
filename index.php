@@ -33,7 +33,10 @@ session_start();
 </head>
 
 <body>
-    <!--Navbar-->
+<?php 
+if (!isset($_SESSION['username']) && !isset($_SESSION['admin']))
+{
+    ?>
     <div class="navbar-fixed">
         <nav class="nav-extended">
             <div class="nav-wrapper">
@@ -42,8 +45,6 @@ session_start();
                         class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="index.php">Accueil</a></li>
-                    <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
-                    <li><a href="eliott-projects.php">Projets Eliott</a></li>
                     <li><a href="connexion.php">Connexion</a></li>
                 </ul>
             </div>
@@ -56,14 +57,71 @@ session_start();
         </nav>
     </div>
 
+    <?php
+    }elseif (isset($_SESSION['username']) && isset($_SESSION['admin']) && $_SESSION['admin']==0){ 
+    ?>
+        <!--Navbar-->
+    <div class="navbar-fixed">
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+                <a href="#brand-logo" class="brand-logo"><img src="img/logo-gc.png" alt="Logo Gaming Campus"></a>
+                <a href="#mobile-demo" data-target="mobile-demo" class="sidenav-trigger"><i
+                        class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
+                    <li><a href="eliott-projects.php">Projets Eliott</a></li>
+                    <li><a href="action/deconnexion.php">Deconnexion</a></li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="#title-h1">Présentation</a></li>
+                    <li class="tab"><a href="#projects">Projet commun</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <ul class="sidenav" id="mobile-demo">
         <li><a href="index.php">Accueil</a></li>
         <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
         <li><a href="eliott-projects.php">Projets Eliott</a></li>
-        <li><a href="connexion.php">Connexion</a></li>
+        <li><a href="action/deconnexion.php">Deconnexion</a></li>
     </ul>
+<?php }elseif (isset($_SESSION['username']) && isset($_SESSION['admin']) && $_SESSION['admin']==1){ ?>
+        <!--Navbar-->
+        <div class="navbar-fixed">
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+                <a href="#brand-logo" class="brand-logo"><img src="img/logo-gc.png" alt="Logo Gaming Campus"></a>
+                <a href="#mobile-demo" data-target="mobile-demo" class="sidenav-trigger"><i
+                        class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
+                    <li><a href="eliott-projects.php">Projets Eliott</a></li>
+                    <li><a href="action/deconnexion.php">Deconnexion</a></li>
+                    <li><a href="admin/admin.php">Administration</a></li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="#title-h1">Présentation</a></li>
+                    <li class="tab"><a href="#projects">Projet commun</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.php">Accueil</a></li>
+        <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
+        <li><a href="eliott-projects.php">Projets Eliott</a></li>
+        <li><a href="action/deconnexion.php">Deconnexion</a></li>
+        <li><a href="admin/admin.php">Administration</a></li>
+    </ul>
+    <?php } ?>
 
     <div class="video-chad" id="video-chad">
         <video controls>
