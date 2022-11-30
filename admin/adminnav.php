@@ -20,8 +20,8 @@
         </div>
         <div class="nav-content">
             <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#title-h1">Présentation</a></li>
-                <li class="tab"><a href="#projects">Projet commun</a></li>
+                <li class="tab"><a href="#title-h1">Liste des utilisateurs</a></li>
+                <li class="tab"><a href="#projects">Liste des Projets</a></li>
             </ul>
         </div>
     </nav>

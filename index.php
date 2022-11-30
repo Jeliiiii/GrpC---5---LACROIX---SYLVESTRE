@@ -89,6 +89,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['admin']))
         <li><a href="eliott-projects.php">Projets Eliott</a></li>
         <li><a href="action/deconnexion.php">Deconnexion</a></li>
     </ul>
+
 <?php }elseif (isset($_SESSION['username']) && isset($_SESSION['admin']) && $_SESSION['admin']==1){ ?>
         <!--Navbar-->
         <div class="navbar-fixed">
