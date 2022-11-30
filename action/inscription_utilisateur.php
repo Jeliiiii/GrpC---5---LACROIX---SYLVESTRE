@@ -38,6 +38,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                     header("Location: ../connexion.php");
                 }
             } catch (\Throwable $th) {
+                $_SESSION['res'] = NULL;
                 $_SESSION['res'] = "Echec Ajout";
                 header("Location: ../connexion.php");
             }
