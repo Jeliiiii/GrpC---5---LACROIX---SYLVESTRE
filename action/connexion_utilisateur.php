@@ -3,8 +3,7 @@
 ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
-
-//session_start();
+session_start();
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
 
@@ -14,7 +13,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = $_POST['password'];
 
     if ($username !== "" && $password !== "") {
-        //Verifier si le mot de passe est le même que celui de la BDD
         $mdp = $pdo->prepare('SELECT `password` FROM user WHERE username = ?');
         $mdp->execute(array($username));
         $hasheur = $mdp->fetch();
