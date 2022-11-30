@@ -101,8 +101,8 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['admin']))
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
                     <li><a href="eliott-projects.php">Projets Eliott</a></li>
-                    <li><a href="action/deconnexion.php">Deconnexion</a></li>
                     <li><a href="admin/admin.php">Administration</a></li>
+                    <li><a href="action/deconnexion.php">Deconnexion</a></li>
                 </ul>
             </div>
             <div class="nav-content">
@@ -118,8 +118,8 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['admin']))
         <li><a href="index.php">Accueil</a></li>
         <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
         <li><a href="eliott-projects.php">Projets Eliott</a></li>
-        <li><a href="action/deconnexion.php">Deconnexion</a></li>
         <li><a href="admin/admin.php">Administration</a></li>
+        <li><a href="action/deconnexion.php">Deconnexion</a></li>
     </ul>
     <?php } ?>
 
