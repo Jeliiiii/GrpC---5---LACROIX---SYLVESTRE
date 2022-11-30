@@ -34,18 +34,24 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 $_SESSION['admin'] = $admin['admin'];
 
                 if ($admin['admin'] == 1) {
+                    $_SESSION['res'] = NULL;
+                    $_SESSION['res'] ="Connexion administrateur";
                     header('Location: ../index.php');
                 } elseif ($admin['admin'] == 0) {
+                    $_SESSION['res'] = NULL;
+                    $_SESSION['res'] ="Connexion utilisateur";
                     header('Location: ../index.php');
                 } else {
                     header('Location : ../connexion.php?grade_inexistant');
                     echo "Veuillez vérifier l'existence de votre utilisateur";
                 }
             } else {
+                $_SESSION['res'] = NULL;
                 $_SESSION['res'] = "mot de passe incorrect";
                 header('Location: ../connexion.php?mauvais_mdp'); // utilisateur ou mot de passe incorrect
             }
         } else {
+            $_SESSION['res'] = NULL;
             $_SESSION['res'] = $don;
             header('Location: ../connexion.php?argument_vide'); // utilisateur ou mot de passe vide
         }
