@@ -25,11 +25,11 @@ function checkKeyPress(key) {
     } else if (keys.substr(-4) === 'chad') {
         alert('mode chad activé');
         document.getElementById("title-h2").innerHTML = "L'antre du chad";
-        document.getElementById('image-1').src = "img/gigachad1.jpg";  
-        document.getElementById('image-2').src = "img/gigachad2.jpg";  
-        document.getElementById('image-3').src = "img/dr-chad2.jpg";  
-        document.getElementById('image-4').src = "img/gigachad4.jpg";  
-        document.getElementById('image-5').src = "img/dr-chad3.jpg";  
+        document.getElementById('image-1').src = "img/script/gigachad1.jpg";  
+        document.getElementById('image-2').src = "img/script/gigachad2.jpg";  
+        document.getElementById('image-3').src = "img/script/dr-chad2.jpg";  
+        document.getElementById('image-4').src = "img/script/gigachad4.jpg";  
+        document.getElementById('image-5').src = "img/script/dr-chad3.jpg";  
         document.getElementById('explaining-text').innerHTML = "Quelques photos du giga chad";
     }
 }

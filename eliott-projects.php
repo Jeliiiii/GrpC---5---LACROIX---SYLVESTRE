@@ -39,6 +39,7 @@ session_start();
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
                     <li><a href="eliott-projects.php">Projets Eliott</a></li>
+                    <li><a href="projets.php">Projets supplémentaires</a></li>
                     <?php if (isset($_SESSION['username'])) { ?>
                     <li><a href="action/deconnexion.php">Deconnexion</a></li>
                     <?php } ?>
@@ -61,6 +62,7 @@ session_start();
         <li><a href="index.php">Accueil</a></li>
         <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
         <li><a href="eliott-projects.php">Projets Eliott</a></li>
+        <li><a href="projets.php">Projets supplémentaires</a></li>
         <?php if (isset($_SESSION['username'])) { ?>
         <li><a href="action/deconnexion.php">Deconnexion</a></li>
         <?php } ?>
@@ -192,7 +194,7 @@ session_start();
                             placeholder="Votre Message:"></textarea>
                     </p>
                     <div class="button-env">
-                        <a href="" class="waves-effect waves-light btn" rel="nofollow" target="_blank"><i
+                        <a href="" class="waves-effect waves-light btn" rel="me nofollow" target="_blank"><i
                                 class="material-icons left">done</i>Envoyer</a>
                     </div>
                 </form>

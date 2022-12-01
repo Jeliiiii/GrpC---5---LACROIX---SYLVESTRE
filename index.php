@@ -47,6 +47,7 @@ session_start();
                     <?php if (isset($_SESSION['username'])) { ?>
                     <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
                     <li><a href="eliott-projects.php">Projets Eliott</a></li>
+                    <li><a href="projets.php">Projets supplémentaires</a></li>
                     <?php } ?>
 
                     <?php if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) { ?>
@@ -78,6 +79,7 @@ session_start();
         <?php if (isset($_SESSION['username'])) { ?>
         <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
         <li><a href="eliott-projects.php">Projets Eliott</a></li>
+        <li><a href="projets.php">Projets supplémentaires</a></li>
         <?php } ?>
 
         <?php if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) { ?>
@@ -202,7 +204,7 @@ session_start();
                             placeholder="Votre Message :"></textarea>
                     </p>
                     <div class="button-env">
-                        <a href="" class="waves-effect waves-light btn" target="_blank"><i
+                        <a href="" class="waves-effect waves-light btn" rel="me nofollow" target="_blank"><i
                                 class="material-icons left">done</i>Envoyer</a>
                     </div>
                 </form>
