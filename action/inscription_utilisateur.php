@@ -20,7 +20,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
                 $username = $_POST['username'];
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-                $grade = $_POST['email'];
+                $email = $_POST['email'];
 
                 if (!$pdo) {
                     header('Location: ../connexion.php'); // Connexion impossible

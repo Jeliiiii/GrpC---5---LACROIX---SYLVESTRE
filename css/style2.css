@@ -1,17 +1,43 @@
-body {
-    background: white;
-    font-family: "Tahoma", "Geneva", "Sans Serif";
-    padding: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+html {
+    scroll-behavior: smooth;
 }
 
-#container {
-    width: 400px;
-    margin: 0 auto;
-    margin-top: 10%;
+nav {
+    height: 100px;
 }
 
+.nav-extended {
+    background-color: black !important;
+    font-family: 'Urbanist', cursive;
+    font-size: 30px;
+    font-weight: 50;
+}
+
+.sidenav {
+    background-color: rgb(255, 255, 255) !important;
+    font-family: 'Urbanist', cursive;
+}
+
+.brand-logo img {
+    width: 75px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Urbanist', cursive;
+    font-weight: 50;
+    color: rgb(0, 0, 0);
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Urbanist', cursive;
+    font-weight: 50;
+    color: white;
+    background-color: #000000;
+    margin: 0;
+}
 
 /* Bordered form */
 
@@ -23,13 +49,6 @@ form {
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-
-#container h1 {
-    width: 40%;
-    margin: 0 auto;
-    padding-bottom: 10px;
-}
-
 
 /* Full-width inputs */
 
@@ -64,39 +83,3 @@ input[type=submit]:hover {
 }
 
 
-/* Navigation bar */
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-
-/* Change the link color to #111 (black) on hover */
-
-li a:hover {
-    background-color: #111;
-}
-
-nav {
-    position: fixed;
-}
-
-nav-content{
-    color: #111;
-}

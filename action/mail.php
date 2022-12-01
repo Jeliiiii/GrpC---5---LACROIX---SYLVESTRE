@@ -11,6 +11,7 @@ $description = $_POST['description']."<br><br>Email from : ".$_POST['email'];
 
 if(mail($mail, $problem,$description)){
     echo "mail ok";
+    header('Location: ../index.php');
 }else{
     echo "error";
 }
