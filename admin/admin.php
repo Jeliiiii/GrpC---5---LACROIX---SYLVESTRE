@@ -28,7 +28,7 @@
     }
     echo "</mark></h1>";
     ?>
-    <form action="admin_add_user.php" method="POST">
+    <form action="../action/inscription_utilisateur.php" method="POST">
       <h2 id=ajouter>Ajouter un utilisateur</h2>
 
       <label><b>Nom d'utilisateur</b></label>
@@ -66,7 +66,7 @@
     $reponse = $pdo->query('SELECT * FROM `user`');
     ?>
     <!--Récupérer d'un form les données à ajouter-->
-    <form action="admin_modify_user.php" method="POST">
+    <form action="../action/modifier_utilisateur.php" method="POST">
       <h2 id=modifier>Modifier un utilisateur</h2>
 
       <label><b>Nom d'utilisateur</b></label><br>
@@ -115,7 +115,7 @@
     $reponse2 = $pdo->query('SELECT * FROM `user`');
     ?>
     <!--Récupérer d'un form les données à ajouter-->
-    <form action="admin_remove_user.php" method="POST">
+    <form action="../action/retirer_utilisateur.php" method="POST">
       <h2 id=retirer>Retirer un utilisateur</h2>
 
       <label><b>Nom de l'utilisateur à retirer</b></label>

@@ -98,3 +98,33 @@ h2 {
     margin-top: 200px;
 }
 
+.btn, .btn-large, .btn-small {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: #e96069;
+    text-align: center;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+.modal .modal-content{
+    padding: 24px;
+    background-color: #000000;
+    font-family: 'Urbanist', cursive;
+    font-weight: 50;
+    font-size: 50px;
+    text-align: center;
+    color: grey;
+}
+
+.modal .modal-footer {
+    background-color: rgb(65, 65, 65);
+    color: #e96069;
+}
+
+.textarea {
+    width: 100%;
+    font-size: 10px;
+    height: 3rem;
+    background-color: transparent;
+}
