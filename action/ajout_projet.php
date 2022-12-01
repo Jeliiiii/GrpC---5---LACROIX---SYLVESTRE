@@ -2,13 +2,13 @@
 require_once "database.php";
 
 if (isset($_FILES['img']) && !empty($_FILES['img']['name'])) {
-    $destination = "../img/projetsSup/" . $_FILES['img']['name'];
-    move_uploaded_file($_FILES['img']['name'], $destination);
+    $destination = "../img/projetsSup/".$_FILES['img']['name'];
+    move_uploaded_file($_FILES['img']['tmp_name'], $destination);
 
-    $sql = "INSERT INTO projet(name, img) VALUES(:name, :img)";
+    $sql = "INSERT INTO projet(projectName, img) VALUES(:name, :img)";
     $dataBinded = array(
         ':name' => $_POST['projectName'],
-        'img' => $destination,
+        'img' => $destination
     );
     $pre = $pdo->prepare($sql);
     $pre->execute($dataBinded);
@@ -16,6 +16,5 @@ if (isset($_FILES['img']) && !empty($_FILES['img']['name'])) {
     echo "no file";
     exit();
 }
-
 header('Location:../projets.php')
     ?>

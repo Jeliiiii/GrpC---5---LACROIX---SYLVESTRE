@@ -99,18 +99,11 @@ session_start();
     </ul>
 
 
-    <!--  
-            Afficher la liste des projets actuellements enregistrés
-            <div id="container">-->
-    <!--Zone de modification-->
+
     <?php
     $reponse = " ";
     $reponse = $pdo->query('SELECT * FROM `projet`');
     ?>
-
-    <!--Récupérer d'un form les données à ajouter
-        CREER un nouveau projet
-        AJOUTER de nouvelles images avec le nom du projet-->
     <form action="action/ajout_projet.php" method="post" enctype="multipart/form-data">
         <h2 id=ajouter>Ajouter un projet</h2>
 
@@ -121,8 +114,8 @@ session_start();
         <input type="file" name="img" required>
 
         <input type="submit" value='Ajoutez votre projet'>
-        </div>
     </form>
+
     <?php
     require "action/afficher_project.php";
     foreach ($data_project as $project) { ?>
@@ -134,12 +127,13 @@ session_start();
             <input type='hidden' name="id" value="<?php echo $project['id'] ?>">
             <input type='text' name='name' value="<?php echo $project['name'] ?>">
             <button type='submit'> Changer le nom du projet </button>
-            </form>
+        </form>
 
-            <form method="post" action="action/remove_project.php">
-                <input type="hidden" name="id" value="<?php echo $project['id'] ?>">
-                <button type='submit'> Supprimer le projet </button>
-                <?php } ?>
+        <form method="post" action="action/remove_project.php">
+            <input type="hidden" name="id" value="<?php echo $project['id'] ?>">
+            <button type='submit'> Supprimer le projet </button>
+        </form>
+    <?php } ?>
     </div>
 </body>
 
