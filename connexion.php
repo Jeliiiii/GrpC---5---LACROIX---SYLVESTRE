@@ -87,6 +87,8 @@ session_start();
             <label><b>Nom d'utilisateur</b></label>
             <input type="text" placeholder="Entrez votre nom d'utilisateur" name="username" required>
 
+            <input id="admin" name="admin" type="hidden" value="Non">
+
             <label><b>Mot de passe</b></label>
             <input type="password" placeholder="Entrez votre mot de passe" name="password" required>
 
