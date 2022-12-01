@@ -1,4 +1,4 @@
-<?php require_once "../action/database.php"; ?>
+<?php require "../action/database.php"; ?>
 <html>
 <link type="text/css" rel="stylesheet" href="../css/style2.css">
 <head>

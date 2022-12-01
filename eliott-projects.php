@@ -50,6 +50,7 @@ session_start();
                     <li class="tab"><a href="#music-project">Projet Musical</a></li>
                     <li class="tab"><a href="#school-project">Projet Scolaire</a></li>
                     <li class="tab"><a href="#gaming-project">Projet Setup Gaming</a></li>
+                    <li class="tab"><a href="#contactus">Contactez-nous</a></li>
                 </ul>
             </div>
         </nav>
@@ -164,7 +165,7 @@ session_start();
         <div class="parallax"><img src="img/img-parallax2.jpg"
                 alt="Image fond d'écran No Man's Sky planète et Vaisseau">
         </div>
-        <div class="form-button">
+        <div class="form-button" id = 'contactus'>
             <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
         </div>
         <!-- Modal Structure -->
@@ -178,9 +179,10 @@ session_start();
                     </p>
                     <p>
                         <select name="probleme" id="font_probleme">
-                            <option value="fichiers">Fichiers corrompus</option>
-                            <option value="bug">Bug divers</option>
-                            <option value="demarrage">Démarrage</option>
+                            <option value="basic">Sélectionnez l'objet:</option>
+                            <option value="bug">Problème avec le site</option>
+                            <option value="demande">Demande</option>
+                            <option value="idea">Idées</option>
                         </select>
                     </p>
                     <p>

@@ -67,6 +67,7 @@ session_start();
                 <ul class="tabs tabs-transparent">
                     <li class="tab"><a href="#title-h1">Présentation</a></li>
                     <li class="tab"><a href="#projects">Projet commun</a></li>
+                    <li class="tab"><a href="#contactus">Contactez-nous</a></li>
                 </ul>
             </div>
         </nav>
@@ -175,7 +176,7 @@ session_start();
         <div class="parallax"><img src="img/img-parallax2.jpg"
                 alt="Image fond d'écran No Man's Sky planète et Vaisseau">
         </div>
-        <div class="form-button">
+        <div class="form-button" id = 'contactus'>
             <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
         </div>
         <!-- Modal Structure -->
