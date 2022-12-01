@@ -20,7 +20,6 @@
         </div>
         <div class="nav-content">
             <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#ajouter">Ajouter utilisateur</a></li>
                 <li class="tab"><a href="#modifier">Modifier utilisateur</a></li>
                 <li class="tab"><a href="#retirer">Retirer utilisateur</a></li>
             </ul>

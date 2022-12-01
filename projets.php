@@ -123,18 +123,19 @@ session_start();
         <h3>
             <?php echo $projet['projectName'] ?>
         </h3>
+        <img src="<?php echo $projet['img']?>" alt="image du projet">
         <from method="post" action="action/majProject.php">
             <input type='hidden' name="id" value="<?php echo $projet['id'] ?>">
-            <input type='text' name='name' value="<?php echo $projet['projectName'] ?>">
+            <input type='text' name='projectName' value="<?php echo $projet['projectName'] ?>">
             <button type='submit'> Changer le nom du projet </button>
-        </form>
-        <?php if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) { ?>
+            </form>
+            <?php if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) { ?>
             <form method="post" action="action/remove_project.php">
                 <input type="hidden" name="id" value="<?php echo $projet['id'] ?>">
                 <button type='submit'> Supprimer le projet </button>
-        </form>
-        <?php } ?>
-    <?php } ?>
+            </form>
+            <?php } ?>
+            <?php } ?>
     </div>
 </body>
 

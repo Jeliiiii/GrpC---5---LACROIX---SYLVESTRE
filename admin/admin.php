@@ -1,5 +1,8 @@
-<?php require_once "../action/database.php"; ?>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
+<?php require_once "../action/database.php"; 
+session_start();
+?>
 
 <head>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,7 +18,8 @@
 </head>
 
 <body>
-  <?php require "adminnav.php"; ?>
+  <?php /*if(isset($_SESSION['user']) && $_SESSION['user']['admin']==1){*/
+  require "adminnav.php"; ?>
 
   <div id="container">
     <!--Zone d'ajout-->
@@ -28,25 +32,6 @@
     }
     echo "</mark></h1>";
     ?>
-    <form action="action/inscription_utilisateur.php" method="POST">
-      <h2 id='title-h2'>Inscription</h2>
-
-      <label><b>Email</b></label>
-      <input type="email" placeholder="Entrez votre email :" name="email" required>
-
-      <label><b>Nom d'utilisateur</b></label>
-      <input type="text" placeholder="Entrez votre nom d'utilisateur :" name="username" required>
-
-      <label><b>Admin</b></label>
-      <input type='hidden' name="admin" value=0>
-
-      <label><b>Mot de passe</b></label>
-      <input type="password" placeholder="Entrez votre mot de passe :" name="password" required>
-
-      <input type="submit" id='submit' value='Inscrivez-vous'>
-
-
-    </form>
   </div>
 
   <div id="container">
@@ -126,10 +111,14 @@
       ?>
     </form>
   </div>
+  <?php/*}else{ 
+  header('Location: ../img/sortie/comment_ca_mon_reuf.png');
+} */?>
 
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/materialize.min.js"></script>
-  <script src="../js/script.js"></script>
+
 </body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/materialize.min.js"></script>
+<script src="../js/script.js"></script>
 
 </html>
