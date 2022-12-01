@@ -65,10 +65,10 @@ session_start();
             <h2 id = 'title-h1'>Connexion</h2>
 
             <label><b>Nom d'utilisateur</b></label>
-            <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+            <input type="text" placeholder="Entrer le nom d'utilisateur :" name="username" required>
 
             <label><b>Mot de passe</b></label>
-            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+            <input type="password" placeholder="Entrer le mot de passe :" name="password" required>
 
             <input type="submit" id='submit' value='Connectez-vous'>
 
@@ -82,15 +82,15 @@ session_start();
             <h2 id = 'title-h2'>Inscription</h2>
 
             <label><b>Email</b></label>
-            <input type="email" placeholder="Entrez votre email" name="email" required>
+            <input type="email" placeholder="Entrez votre email :" name="email" required>
 
             <label><b>Nom d'utilisateur</b></label>
-            <input type="text" placeholder="Entrez votre nom d'utilisateur" name="username" required>
+            <input type="text" placeholder="Entrez votre nom d'utilisateur :" name="username" required>
 
             <input id="admin" name="admin" type="hidden" value="Non">
 
             <label><b>Mot de passe</b></label>
-            <input type="password" placeholder="Entrez votre mot de passe" name="password" required>
+            <input type="password" placeholder="Entrez votre mot de passe :" name="password" required>
 
             <input type="submit" id='submit' value='Inscrivez-vous'>
 

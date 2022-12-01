@@ -1,4 +1,4 @@
-<?php require "../action/database.php"; ?>
+<?php require_once "../action/database.php"; ?>
 <html>
 
 <head>

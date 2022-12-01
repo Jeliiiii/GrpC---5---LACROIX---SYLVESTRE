@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+require_once "../action/database.php";
+
 $mail = "Minipotal52@gmail.com";
 $problem = $_POST['probleme'];
 $description = $_POST['description']."<br><br>Email from : ".$_POST['email'];
