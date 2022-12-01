@@ -107,3 +107,36 @@ h2 {
     text-align: center;
     margin-top: 200px;
 }
+
+.btn, .btn-large, .btn-small {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: #e96069;
+    text-align: center;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+.modal .modal-content{
+    padding: 24px;
+    background-color: #000000;
+    font-family: 'Urbanist', cursive;
+    font-weight: 50;
+    font-size: 50px;
+    text-align: center;
+    color: #e96069;
+}
+
+.modal .modal-footer {
+    background-color: #e96069;
+    color: #e96069;
+}
+
+.modal-content input{
+    color: rgb(255, 255, 255);
+}
+
+.modal .modal-content #description{
+    font-size: 18px;
+    color: white;
+}

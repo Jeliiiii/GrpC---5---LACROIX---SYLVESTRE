@@ -135,24 +135,23 @@ session_start();
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h4>Formulaire de contact</h4>
-                <form method="post" action="action/mail.php" enctype="text/plain">
+                <form method="post" action="action/mail.php">
                     <p>
-                        <label for="email">Mail</label> <input type="email" id="email" name="email" required
-                            class="required email">
+                        <label for="email">Email :</label>
+                        <input type="email" id ="email" placeholder="Entrez votre email :" name="email" required>
                     </p>
-                    <p>
-                        <select name="probleme" id="font_probleme">
-                            <option value="basic">Sélectionnez l'objet:</option>
-                            <option value="bug">Problème avec le site</option>
-                            <option value="demande">Demande</option>
-                            <option value="idea">Idées</option>
-                        </select>
-                    </p>
+                    <label for="email">Objet :</label>
+                    <select name="probleme" id="font_probleme">
+                        <option value="basic">Sélectionnez l'objet :</option>
+                        <option value="bug">Problème avec le site</option>
+                        <option value="demande">Demande(s)</option>
+                        <option value="idea">Idée(s)</option>
+                    </select>
                     <p>
                         <label for="description">Description :</label>
                         <br>
                         <textarea id="description" name="description" required class="required text"
-                            placeholder="Votre Message:"></textarea>
+                            placeholder="Votre Message :"></textarea>
                     </p>
                     <div class="button-env">
                         <a href="" class="waves-effect waves-light btn" rel="me nofollow" target="_blank"><i
