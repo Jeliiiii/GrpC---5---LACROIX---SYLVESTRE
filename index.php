@@ -15,7 +15,7 @@ session_start();
     <title>G.Tech 1 - Nos projets</title>
     <meta name="description"
         content="Nous allons vous parler de nos expériences, et nos projets au sein de l'école Gaming Campus.">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/logo-gc.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/global/logo-gc.png">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@ session_start();
     <div class="navbar-fixed">
         <nav class="nav-extended">
             <div class="nav-wrapper">
-                <a href="#brand-logo" class="brand-logo"><img src="img/logo-gc.png" alt="Logo Gaming Campus"></a>
+                <a href="#brand-logo" class="brand-logo"><img src="img/global/logo-gc.png" alt="Logo Gaming Campus"></a>
                 <a href="#mobile-demo" data-target="mobile-demo" class="sidenav-trigger"><i
                         class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -104,14 +104,14 @@ session_start();
     <div class="cards">
         <div class="parallax-container">
             <div class="parallax">
-                <img src="img/img-parallax3.jpg" alt="Image Fond d'écran No Man's Sky">
+                <img src="img/global/img-parallax3.jpg" alt="Image Fond d'écran No Man's Sky">
             </div>
             <h1 id="title-h1">Présentation des étudiants</h1>
             <div class="row">
                 <div class="col offset-s3 s3 offset-m3 m3 offset-l3 l3">
                     <div class="card" id="presentation">
                         <div class="card-image">
-                            <img src="img/sylvestre.jpg" alt="Image Matthieu SYLVESTRE">
+                            <img src="img/global/sylvestre.jpg" alt="Image Matthieu SYLVESTRE">
                             <span class="card-title">Matthieu SYLVESTRE</span>
                         </div>
                         <div class="card-content">
@@ -130,7 +130,7 @@ session_start();
                 <div class="col s3 m3 l3">
                     <div class="card" id="presentation2">
                         <div class="card-image">
-                            <img src="img/lacroix.jpeg" alt="Image Eliott LACROIX">
+                            <img src="img/global/lacroix.jpeg" alt="Image Eliott LACROIX">
                             <span class="card-title">Eliott LACROIX</span>
                         </div>
                         <div class="card-content">
@@ -156,15 +156,15 @@ session_start();
 
 
     <div class="carousel" id="projects">
-        <div class="carousel-item"><img src="img/prj-1.jpg" id="image-1"
+        <div class="carousel-item"><img src="img/global/prj-1.jpg" id="image-1"
                 alt="Image Site G.TECH 1 Dishonored 2 Gaming Campus"></div>
-        <div class="carousel-item"><img src="img/prj-2.jpg" id="image-2"
+        <div class="carousel-item"><img src="img/global/prj-2.jpg" id="image-2"
                 alt="Image Site G.TECH 1 Dishonored 2 Gaming Campus"></div>
-        <div class="carousel-item"><img src="img/prj-3.jpg" id="image-3"
+        <div class="carousel-item"><img src="img/global/prj-3.jpg" id="image-3"
                 alt="Image Site G.TECH 1 Dishonored 2 HTML Gaming Campus"></div>
-        <div class="carousel-item"><img src="img/prj-4.jpg" id="image-4"
+        <div class="carousel-item"><img src="img/global/prj-4.jpg" id="image-4"
                 alt="Image Site G.TECH 1 Dishonored 2 CSS Gaming Campus"></div>
-        <div class="carousel-item"><img src="img/prj-5.jpg" id="image-5"
+        <div class="carousel-item"><img src="img/global/prj-5.jpg" id="image-5"
                 alt="Image Site G.TECH 1 Dishonored 2 Contact Gaming Campus"></div>
         <p id="explaining-text">Voici des captures d'écran de notre dernier projet commun. Ce dernier portait sur le jeu
             Dishonored 2</p>
@@ -173,7 +173,7 @@ session_start();
 
 
     <div class="parallax-container">
-        <div class="parallax"><img src="img/img-parallax2.jpg"
+        <div class="parallax"><img src="img/global/img-parallax2.jpg"
                 alt="Image fond d'écran No Man's Sky planète et Vaisseau">
         </div>
         <div class="form-button" id = 'contactus'>
@@ -185,9 +185,10 @@ session_start();
                 <h4>Formulaire de contact</h4>
                 <form method="post" action="action/mail.php">
                     <p>
-                        <label for="email">Mail</label> <input type="email" id="email" name="email" required
-                            class="required email">
+                        <label for="email">Email:</label>
+                        <input type="email" placeholder="Entrez votre email:" name="email" required>
                     </p>
+                    <label for="email">Objet:</label>
                     <select name="probleme" id="font_probleme">
                         <option value="basic">Sélectionnez l'objet:</option>
                         <option value="bug">Problème avec le site</option>
@@ -201,7 +202,7 @@ session_start();
                             placeholder="Votre Message:"></textarea>
                     </p>
                     <div class="button-env">
-                        <a href="" class="waves-effect waves-light btn" rel="nofollow" target="_blank"><i
+                        <a href="" class="waves-effect waves-light btn" target="_blank"><i
                                 class="material-icons left">done</i>Envoyer</a>
                     </div>
                 </form>

@@ -122,9 +122,6 @@ h2 {
     color: #e96069;
 }
 
-.textarea {
-    width: 100%;
-    font-size: 10px;
-    height: 3rem;
-    background-color: transparent;
+.modal-content input{
+    color: grey;
 }

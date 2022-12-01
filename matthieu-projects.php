@@ -113,7 +113,7 @@ session_start();
             <div class="carousel-item"><img src="img/diderot2.jpg" alt="Photo deventure du Lycée Diderot"></div>
             <div class="carousel-item"><img src="img/lombards1.jpg" alt="Photo logo Les Lombards"></div>
             <div class="carousel-item"><img src="img/lombards2.jpg" alt="Photo deventure du Lycée Les Lombards"></div>
-            <div class="carousel-item"><img src="img/gaming-campus2.jpg" alt="Image Logo Gaming Campus">
+            <div class="carousel-item"><img src="img/global/gaming-campus2.jpg" alt="Image Logo Gaming Campus">
             </div>
             <div class="carousel-item"><img src="img/gaming-campus1.jpg" alt="Image Locaux Gaming Campus"></div>
             <p>Quelques images des lieux d'études que j'ai fréquenté. <br> <br> Mon parcours: <br> - 2 Baccalauréat (SI
@@ -123,7 +123,7 @@ session_start();
         </div>
     </div>
     <div class="parallax-container">
-        <div class="parallax"><img src="img/img-parallax2.jpg"
+        <div class="parallax"><img src="img/global/img-parallax2.jpg"
                 alt="Image fond d'écran No Man's Sky planète et Vaisseau">
         </div>
         <div class="form-button" id = 'contactus'>

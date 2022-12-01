@@ -12,7 +12,7 @@ require('database.php');
 if (isset($_POST['id'])) {
 	$id = $_POST['id'];
 } else {
-	header("Location: admin.php?rien_dedans");
+	header("Location: ../admin/admin.php?rien_dedans");
 }
 
 $reponse = " ";
@@ -20,7 +20,7 @@ $reponse = " ";
 if (isset($_POST['id'])) {
 	//Connexion a la BDD
 	if (!$pdo) {
-		header('Location: admin.php'); // Connexion impossible
+		header('Location: ../admin/admin.php'); // Connexion impossible
 		die('connexion impossible');
 	}
 
@@ -40,14 +40,14 @@ if (isset($_POST['id'])) {
 		}
 		if ($verif != NULL) {
 			$_SESSION['res'] = " Utilisateur non supprimé";
-			header("Location: admin.php");
+			header("Location: ../admin/admin.php");
 		} else {
 			$_SESSION['res'] = "Utilisateur supprimé";
-			header("Location: admin.php");
+			header("Location: ../admin/admin.php");
 		}
 	} catch (\Throwable $th) {
 		$_SESSION['res'] = "Echec retrait";
-		header("Location: admin.php");
+		header("Location: ../admin/admin.php");
 	}
 }
 

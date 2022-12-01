@@ -11,7 +11,7 @@ session_start();
     <link type="text/css" rel="stylesheet" href="css/style2.css">
     <meta name="description"
         content="Nous allons vous parler de nos expériences, et nos projets au sein de l'école Gaming Campus.">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/logo-gc.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/global/logo-gc.png">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@ session_start();
     <div class="navbar-fixed">
         <nav class="nav-extended">
             <div class="nav-wrapper">
-                <a href="#brand-logo" class="brand-logo"><img src="img/logo-gc.png" alt="Logo Gaming Campus"></a>
+                <a href="#brand-logo" class="brand-logo"><img src="img/global/logo-gc.png" alt="Logo Gaming Campus"></a>
                 <a href="#mobile-demo" data-target="mobile-demo" class="sidenav-trigger"><i
                         class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -86,6 +86,8 @@ session_start();
 
             <label><b>Nom d'utilisateur</b></label>
             <input type="text" placeholder="Entrez votre nom d'utilisateur" name="username" required>
+
+            <input id="admin" name="admin" type="hidden" value="Non">
 
             <label><b>Mot de passe</b></label>
             <input type="password" placeholder="Entrez votre mot de passe" name="password" required>

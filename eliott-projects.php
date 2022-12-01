@@ -11,7 +11,7 @@ session_start();
     <meta charset="utf-8">
     <title>Eliott LACROIX - G.TECH 1 - Mes projets</title>
     <meta name="description" content="Je vais vous parler de mes expériences, et mes projets personnels.">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/logo-gc.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/global/logo-gc.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -32,7 +32,7 @@ session_start();
     <div class="navbar-fixed">
         <nav class="nav-extended">
             <div class="nav-wrapper">
-                <a href="#brand-logo" class="brand-logo"><img src="img/logo-gc.png" alt="logo Gaming Campus"></a>
+                <a href="#brand-logo" class="brand-logo"><img src="img/global/logo-gc.png" alt="logo Gaming Campus"></a>
                 <a href="#mobile-demo" data-target="mobile-demo" class="sidenav-trigger"><i
                         class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -68,7 +68,7 @@ session_start();
 
     <div class="parallax-container" id="parallax1">
         <div class="parallax">
-            <img src="img/img-parallax4.jpg" alt="Image fond d'écran No Man's Sky stylisé">
+            <img src="img/global/img-parallax4.jpg" alt="Image fond d'écran No Man's Sky stylisé">
         </div>
         <h1>Préambule</h1>
         <div class="row">
@@ -98,9 +98,9 @@ session_start();
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe></div>
-            <div class="carousel-item"><img src="img/img-guitar1.png"
+            <div class="carousel-item"><img src="img/projetEliott/img-guitar1.png"
                     alt="Charvel Dk-24 Nova 6 Signature Angel Vivaldi"></div>
-            <div class="carousel-item"><img src="img/amp1.png" alt="Tim Henson sim amp collection Neural DSP"></div>
+            <div class="carousel-item"><img src="img/projetEliott/amp1.png" alt="Tim Henson sim amp collection Neural DSP"></div>
             <p>Quelques images et vidéos de mon projet. <br> <br> <br>
                 Mon équipement: <br> <br>
                 - Guitare : Charvel Dk24 Nova 6 Signature Angel Vivaldi <br>
@@ -117,12 +117,12 @@ session_start();
     <div class="school-project" id="school-project">
         <h2>Mon projet scolaire</h2>
         <div class="carousel" id="project2">
-            <div class="carousel-item"><img src="img/lamache2.jpg" id="lamache-logo-png" alt="Photo logo Lamache"></div>
-            <div class="carousel-item"><img src="img/lamache1.jpg" id="lamache-bat"
+            <div class="carousel-item"><img src="img/projetEliott/lamache2.jpg" id="lamache-logo-png" alt="Photo logo Lamache"></div>
+            <div class="carousel-item"><img src="img/projetEliott/lamache1.jpg" id="lamache-bat"
                     alt="Photo deventure du Lycée/Ecole LaMache"></div>
-            <div class="carousel-item"><img src="img/gaming-campus2.jpg" alt="Image Logo Gaming Campus">
+            <div class="carousel-item"><img src="img/projetEliott/gaming-campus2.jpg" alt="Image Logo Gaming Campus">
             </div>
-            <div class="carousel-item"><img src="img/gaming-campus1.jpg" alt="Image Locaux Gaming Campus"></div>
+            <div class="carousel-item"><img src="img/projetEliott/gaming-campus1.jpg" alt="Image Locaux Gaming Campus"></div>
             <p>Voici mon projet scolaire:<br><br>
                 Mon lycée: LaMache.<br>
                 J'avais rejoint le lycée LaMache pour ma 1ère et ma Terminale,<br>
