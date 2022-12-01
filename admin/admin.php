@@ -1,12 +1,12 @@
 <?php require_once "../action/database.php"; ?>
 <html>
-
+<link type="text/css" rel="stylesheet" href="../css/style2.css">
 <head>
 </head>
 
 <body>
   <?php require "adminnav.php"; ?>
-
+  
   <div id="container">
     <!--Zone d'ajout-->
     <!--Récupérer d'un form les données à ajouter-->

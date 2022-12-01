@@ -62,7 +62,7 @@ session_start();
         <!-- zone de connexion -->
 
         <form action="action/connexion_utilisateur.php" method="POST">
-            <h1 id = 'title-h1'>Connexion</h1>
+            <h2 id = 'title-h1'>Connexion</h2>
 
             <label><b>Nom d'utilisateur</b></label>
             <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
@@ -70,7 +70,7 @@ session_start();
             <label><b>Mot de passe</b></label>
             <input type="password" placeholder="Entrer le mot de passe" name="password" required>
 
-            <input type="submit" id='submit' value='LOGIN'>
+            <input type="submit" id='submit' value='Connectez-vous'>
 
 
         </form>
@@ -90,7 +90,7 @@ session_start();
             <label><b>Mot de passe</b></label>
             <input type="password" placeholder="Entrez votre mot de passe" name="password" required>
 
-            <input type="submit" id='submit' value='REGISTER'>
+            <input type="submit" id='submit' value='Inscrivez-vous'>
 
 
         </form>

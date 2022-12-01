@@ -182,18 +182,16 @@ session_start();
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h4>Formulaire de contact</h4>
-                <form method="post" action="action/mail.php" enctype="text/plain">
+                <form method="post" action="action/mail.php">
                     <p>
                         <label for="email">Mail</label> <input type="email" id="email" name="email" required
                             class="required email">
                     </p>
-                    <p>
-                        <select name="probleme" id="font_probleme">
-                            <option value="fichiers">Fichiers corrompus</option>
-                            <option value="bug">Bug divers</option>
-                            <option value="demarrage">Démarrage</option>
-                        </select>
-                    </p>
+                    <select name="probleme" id="font_probleme">
+                        <option value="fichiers">Fichiers corrompus</option>
+                        <option value="bug">Bug divers</option>
+                        <option value="demarrage">Démarrage</option>
+                    </select>
                     <p>
                         <label for="description">Description :</label>
                         <br>

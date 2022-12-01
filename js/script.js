@@ -2,6 +2,7 @@ $(document).ready(function() {
     $('.sidenav').sidenav();
     $('.carousel').carousel();
     $('.modal').modal();
+    $('select').formSelect();
 });
 $('.parallax').parallax();
 

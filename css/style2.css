@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: black;
+}
+
 nav {
     height: 100px;
 }
@@ -11,6 +15,10 @@ nav {
     font-family: 'Urbanist', cursive;
     font-size: 30px;
     font-weight: 50;
+}
+
+h2{
+    text-align: center;
 }
 
 .sidenav {
@@ -23,26 +31,10 @@ nav {
     padding: 10px;
 }
 
-h1 {
-    text-align: center;
-    font-family: 'Urbanist', cursive;
-    font-weight: 50;
-    color: rgb(0, 0, 0);
-}
-
-h2 {
-    text-align: center;
-    font-family: 'Urbanist', cursive;
-    font-weight: 50;
-    color: white;
-    background-color: #000000;
-    margin: 0;
-}
-
 /* Bordered form */
 
 form {
-    margin: 0;
+    margin: 150px;
     overflow: hidden;
     padding: 30px;
     border: 1px solid #f1f1f1;
@@ -55,9 +47,9 @@ form {
 input[type=text],
 input[type=password],
 input[type=email] {
-    width: 100%;
+    width: 80%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 15px;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -67,7 +59,7 @@ input[type=email] {
 /* Set a style for all buttons */
 
 input[type=submit] {
-    background-color: #53af57;
+    background-color: #e96069;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -79,7 +71,7 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: white;
     color: #53af57;
-    border: 1px solid #53af57;
+    border: 1px solid #e96069;
 }
 
 
