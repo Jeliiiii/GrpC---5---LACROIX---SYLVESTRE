@@ -59,7 +59,7 @@ session_start();
         <li><a href="index.php">Accueil</a></li>
         <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
         <li><a href="eliott-projects.php">Projets Eliott</a></li>
-        <?php if (isset($_SESSION['username'])){ ?>
+        <?php if (isset($_SESSION['username'])) { ?>
         <li><a href="action/deconnexion.php">Deconnexion</a></li>
         <?php } ?>
     </ul>
@@ -119,6 +119,46 @@ session_start();
                 , STI) au Lycée Denis Diderot - Langres <br> - BTS ( SNIR ) au Lycée Polyvalent Les Lombards<br> -
                 Préparation d'un bachelor jeux vidéos
                 au Gaming Campus Lyon</p>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="img/img-parallax2.jpg"
+                alt="Image fond d'écran No Man's Sky planète et Vaisseau">
+        </div>
+        <div class="form-button">
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Formulaire de contact</h4>
+                <form method="post" action="action/mail.php" enctype="text/plain">
+                    <p>
+                        <label for="email">Mail</label> <input type="email" id="email" name="email" required
+                            class="required email">
+                    </p>
+                    <p>
+                        <select name="probleme" id="font_probleme">
+                            <option value="fichiers">Fichiers corrompus</option>
+                            <option value="bug">Bug divers</option>
+                            <option value="demarrage">Démarrage</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="description">Description :</label>
+                        <br>
+                        <textarea id="description" name="description" required class="required text"
+                            placeholder="Votre Message:"></textarea>
+                    </p>
+                    <div class="button-env">
+                        <a href="" class="waves-effect waves-light btn" rel="nofollow" target="_blank"><i
+                                class="material-icons left">done</i>Envoyer</a>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fermer</a>
+            </div>
         </div>
     </div>
 

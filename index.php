@@ -31,6 +31,7 @@ session_start();
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <!--Navbar-->
     <div class="navbar-fixed">
@@ -43,27 +44,27 @@ session_start();
 
                     <li><a href="index.php">Accueil</a></li>
 
-                    <?php if (isset($_SESSION['username'])){  ?>
-                        <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
-                        <li><a href="eliott-projects.php">Projets Eliott</a></li>
-                    <?php }?>
-
-                    <?php if (isset($_SESSION['username']) && $_SESSION['admin']==1){ ?>
-                        <li><a href="admin/admin.php">Administration</a></li>
+                    <?php if (isset($_SESSION['username'])) { ?>
+                    <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
+                    <li><a href="eliott-projects.php">Projets Eliott</a></li>
                     <?php } ?>
 
-                    <?php if (isset($_SESSION['username'])){ ?>
-                        <li><a href="action/deconnexion.php">Deconnexion</a></li>
+                    <?php if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) { ?>
+                    <li><a href="admin/admin.php">Administration</a></li>
                     <?php } ?>
-                    
-                    <?php if (!isset($_SESSION['username']) ){ ?>
-                        <li><a href="connexion.php">Connexion</a></li>
+
+                    <?php if (isset($_SESSION['username'])) { ?>
+                    <li><a href="action/deconnexion.php">Deconnexion</a></li>
+                    <?php } ?>
+
+                    <?php if (!isset($_SESSION['username'])) { ?>
+                    <li><a href="connexion.php">Connexion</a></li>
                     <?php } ?>
 
                 </ul>
             </div>
             <div class="nav-content">
-                <ul class="tabs tabs-transparent"> 
+                <ul class="tabs tabs-transparent">
                     <li class="tab"><a href="#title-h1">Présentation</a></li>
                     <li class="tab"><a href="#projects">Projet commun</a></li>
                 </ul>
@@ -73,21 +74,21 @@ session_start();
 
     <ul class="sidenav" id="mobile-demo">
         <li><a href="index.php">Accueil</a></li>
-        <?php if (isset($_SESSION['username'])){  ?>
+        <?php if (isset($_SESSION['username'])) { ?>
         <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
         <li><a href="eliott-projects.php">Projets Eliott</a></li>
         <?php } ?>
 
-        <?php if (isset($_SESSION['username']) && $_SESSION['admin']==1){ ?>
+        <?php if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) { ?>
         <li><a href="admin/admin.php">Administration</a></li>
         <?php } ?>
 
-        <?php if (isset($_SESSION['username'])){ ?>
+        <?php if (isset($_SESSION['username'])) { ?>
         <li><a href="action/deconnexion.php">Deconnexion</a></li>
         <?php } ?>
 
-        <?php if (isset($_SESSION['username'])){ ?>
-            <li><a href="connexion.php">Connexion</a></li>
+        <?php if (isset($_SESSION['username'])) { ?>
+        <li><a href="connexion.php">Connexion</a></li>
         <?php } ?>
     </ul>
 
@@ -119,7 +120,9 @@ session_start();
                                 ainsi que de FrenchCore</p>
                         </div>
                         <div class="card-action">
+                            <?php if (isset($_SESSION['username'])) { ?>
                             <a href="matthieu-projects.php">Mes projets</a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -137,7 +140,9 @@ session_start();
                             </p>
                         </div>
                         <div class="card-action">
+                            <?php if (isset($_SESSION['username'])) { ?>
                             <a href="eliott-projects.php">Mes projets</a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -178,12 +183,6 @@ session_start();
             <div class="modal-content">
                 <h4>Formulaire de contact</h4>
                 <form method="post" action="action/mail.php" enctype="text/plain">
-                    <p>
-                        <label for="Nom">Nom</label> <input type="text" id="Nom" name="Nom" required
-                            class="required text">
-                        <label for="Prenom">Prénom</label> <input type="text" id="Prenom" name="Prenom" required
-                            class="required text">
-                    </p>
                     <p>
                         <label for="email">Mail</label> <input type="email" id="email" name="email" required
                             class="required email">
