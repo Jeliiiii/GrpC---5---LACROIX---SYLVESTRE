@@ -118,21 +118,22 @@ session_start();
 
     <?php
     require "action/afficher_project.php";
-    foreach ($data_project as $project) { ?>
+    foreach ($data_project as $projet) { ?>
     <div class="bloc_project">
         <h3>
-            <?php echo $project['name'] ?>
+            <?php echo $projet['projectName'] ?>
         </h3>
         <from method="post" action="action/majProject.php">
-            <input type='hidden' name="id" value="<?php echo $project['id'] ?>">
-            <input type='text' name='name' value="<?php echo $project['name'] ?>">
+            <input type='hidden' name="id" value="<?php echo $projet['id'] ?>">
+            <input type='text' name='name' value="<?php echo $projet['projectName'] ?>">
             <button type='submit'> Changer le nom du projet </button>
         </form>
-
-        <form method="post" action="action/remove_project.php">
-            <input type="hidden" name="id" value="<?php echo $project['id'] ?>">
-            <button type='submit'> Supprimer le projet </button>
+        <?php if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) { ?>
+            <form method="post" action="action/remove_project.php">
+                <input type="hidden" name="id" value="<?php echo $projet['id'] ?>">
+                <button type='submit'> Supprimer le projet </button>
         </form>
+        <?php } ?>
     <?php } ?>
     </div>
 </body>

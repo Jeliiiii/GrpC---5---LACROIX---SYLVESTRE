@@ -11,14 +11,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $email = $_POST['email'];
-
-    if ($_POST['admin'] == "Non") {
-        $admin = 0;
-    } elseif ($_POST['admin'] == "Oui") {
-        $admin = 1;
-    } else {
-        header('Location: ../img/sortie/comment_ça_mon_reuf.png');
-    }
+    $admin = $_POST['admin'];
+    
 
     if ($username !== "" && $email !== "" && $password !== "" && $admin !== "") {
 

@@ -38,10 +38,7 @@
       <input type="text" placeholder="Entrez votre nom d'utilisateur :" name="username" required>
 
       <label><b>Admin</b></label>
-      <select id="admin" name="admin" required>
-        <option value="Oui"> Oui </option>
-        <option value="Non"> Non </option>
-      </select>
+      <input type='hidden' name="admin" value=0>
 
       <label><b>Mot de passe</b></label>
       <input type="password" placeholder="Entrez votre mot de passe :" name="password" required>
@@ -76,7 +73,7 @@
       </select><br>
 
       <label><b>Administrateur</b></label><br>
-      <select id="admin" name="administrateur" required>
+      <select id="admin" name="admin" required>
         <option value=0>Non</option>
         <option value=1>Oui</option>
       </select>

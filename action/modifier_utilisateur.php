@@ -14,21 +14,12 @@ $reponse = NULL;
 if (isset($_POST['username']) && isset($_POST['admin'])) {
     //Rajouter les paramètres reçus
 
-    if ($_POST['admin'] == "Non") {
-        $admin = 0;
-    } elseif ($_POST['admin'] == "Oui") {
-        $admin = 1;
-    } else {
-        header('Location: ../admin/admin.php');
-    }
-
-
-    $username = $_POST['username'];
-    $adminbdd = $admin;
+    $id = $_POST['username'];
+    $admin = $_POST['admin'];
 
     try {
-        $reponse = $pdo->prepare('UPDATE `user` SET `username` = ?,`admin`= ? WHERE `username`= ?');
-        $reponse->execute(array($username, $adminbdd, $username));
+        $reponse = $pdo->prepare('UPDATE `user` SET `admin`= ? WHERE `id`= ?');
+        $reponse->execute(array($admin, $id));
         $reponse = NULL;
         $_SESSION['res'] = NULL;
         $_SESSION['res'] = "Modification réussite";
