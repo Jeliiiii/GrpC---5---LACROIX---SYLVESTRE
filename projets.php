@@ -105,42 +105,42 @@ session_start();
     <!--Zone de modification-->
     <?php
     $reponse = " ";
-    $reponse = $pdo->query('SELECT * FROM `projects`');
+    $reponse = $pdo->query('SELECT * FROM `projet`');
     ?>
-    
+
     <!--Récupérer d'un form les données à ajouter
         CREER un nouveau projet
         AJOUTER de nouvelles images avec le nom du projet-->
-    <form action="../action/ajout_projet.php" method="POST">
+    <form action="action/ajout_projet.php" method="post" enctype="multipart/form-data">
         <h2 id=ajouter>Ajouter un projet</h2>
 
         <label><b>Nom du projet</b></label><br>
         <input type="text" placeholder="Entrer le nom du projet :" name="projectName" required>
 
         <label><b>Ajouter une image</b></label><br>
-        <input type="file" placeholder="Choisissez une image :" name="img" required>
+        <input type="file" name="img" required>
 
-        <label><b>Ajouter un texte</b></label><br>
-        <input type="text" placeholder="Description :" name="description" required>
-
-        <input type="submit" id='submit' value='Ajoutez votre projet'>
+        <input type="submit" value='Ajoutez votre projet'>
         </div>
     </form>
-<?php
+    <?php
     require "action/afficher_project.php";
-    foreach($data_project as $project){ ?>
-<div class="bloc_project">
-    <h3><?php echo $project['name'] ?></h3>
-    <from method="post" action = "action/majProject.php">
-        <input type='hidden' name="id" value="<?php echo $project['id'] ?>">
-        <input type='text' name='name' value="<?php echo $project['name'] ?>">
-        <button type = 'submit'> Changer le nom du projet </button>
-    </form>
-    <form method="post" action= "action/remove_project.php">
-        <input type="hidden" name="id" value="<?php echo $project['id'] ?>">
-        <button type = 'submit'> Supprimer le projet </button>
-    <?php } ?>
-</div>
+    foreach ($data_project as $project) { ?>
+    <div class="bloc_project">
+        <h3>
+            <?php echo $project['name'] ?>
+        </h3>
+        <from method="post" action="action/majProject.php">
+            <input type='hidden' name="id" value="<?php echo $project['id'] ?>">
+            <input type='text' name='name' value="<?php echo $project['name'] ?>">
+            <button type='submit'> Changer le nom du projet </button>
+            </form>
+
+            <form method="post" action="action/remove_project.php">
+                <input type="hidden" name="id" value="<?php echo $project['id'] ?>">
+                <button type='submit'> Supprimer le projet </button>
+                <?php } ?>
+    </div>
 </body>
 
 </html>

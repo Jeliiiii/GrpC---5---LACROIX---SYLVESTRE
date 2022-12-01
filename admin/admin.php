@@ -28,34 +28,27 @@
     }
     echo "</mark></h1>";
     ?>
-    <form action="../action/inscription_utilisateur.php" method="POST">
-      <h2 id=ajouter>Ajouter un utilisateur</h2>
+    <form action="action/inscription_utilisateur.php" method="POST">
+      <h2 id='title-h2'>Inscription</h2>
+
+      <label><b>Email</b></label>
+      <input type="email" placeholder="Entrez votre email :" name="email" required>
 
       <label><b>Nom d'utilisateur</b></label>
-      <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+      <input type="text" placeholder="Entrez votre nom d'utilisateur :" name="username" required>
 
-      <label><b>Mot de passe</b></label>
-      <input type="password" placeholder="Entrer le mot de passe" name="password" required>
-
-      <label><b>Email</b></label><br>
-      <input type="email" placeholder="Entrer votre email" name="email" required>
-
-      <label><b>Administrateur</b></label><br>
-      <select id="admin" name="administrateur" required>
-        <option value=0>Non</option>
-        <option value=1>Oui</option>
+      <label><b>Admin</b></label>
+      <select id="admin" name="admin" required>
+        <option value="Oui"> Oui </option>
+        <option value="Non"> Non </option>
       </select>
 
-      <input type="submit" id='submit' value='Ajouter'>
+      <label><b>Mot de passe</b></label>
+      <input type="password" placeholder="Entrez votre mot de passe :" name="password" required>
 
-      <?php
-      if (isset($_GET['erreur'])) {
-        $err = $_GET['erreur'];
-        if ($err == 1 || $err == 2 || $err == 3) {
-          echo "Utilisateur, mot de passe incorrect ou Fonction inconnue";
-        }
-      }
-      ?>
+      <input type="submit" id='submit' value='Inscrivez-vous'>
+
+
     </form>
   </div>
 
@@ -71,32 +64,26 @@
 
       <label><b>Nom d'utilisateur</b></label><br>
       <select id="username" name="username" required>
-      <?php
-        while ($don = $reponse->fetch()) {
-        ?>
+        <?php
+      while ($don = $reponse->fetch()) {
+      ?>
         <option value="<?php echo ($don['id']) ?>">
           <?php echo ($don['username']); ?>
         </option>
         <?php
-        }
+      }
         ?>
-  </select><br>
+      </select><br>
 
-  <label><b>Mot de passe</b></label>
-  <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+      <label><b>Administrateur</b></label><br>
+      <select id="admin" name="administrateur" required>
+        <option value=0>Non</option>
+        <option value=1>Oui</option>
+      </select>
 
-  <label><b>Email</b></label><br>
-  <input type="email" placeholder="Entrer votre email" name="email" required>
+      <input type="submit" id='submit' value='Modifier'>
 
-  <label><b>Administrateur</b></label><br>
-  <select id="admin" name="administrateur" required>
-    <option value=0>Non</option>
-    <option value=1>Oui</option>
-  </select>
-
-  <input type="submit" id='submit' value='Modifier'>
-
-  <?php
+      <?php
   if (isset($_GET['erreur'])) {
     $err = $_GET['erreur'];
     if ($err == 1 || $err == 2 || $err == 3) {
@@ -104,7 +91,7 @@
     }
   }
   ?>
-  </form>
+    </form>
   </div>
 
   <div id="container">

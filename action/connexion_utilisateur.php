@@ -18,7 +18,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $hasheur = $mdp->fetch();
         $hash = $hasheur['password'];
         $don = password_verify($password, $hash);
-        if ($don == 1){
+        if ($don == 1) {
             $reponse = $pdo->query('SELECT * FROM user WHERE username = "' . $username . '"');
 
             $donnees = $reponse->rowCount();
@@ -35,11 +35,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
                 if ($admin['admin'] == 1) {
                     $_SESSION['res'] = NULL;
-                    $_SESSION['res'] ="Connexion administrateur";
+                    $_SESSION['res'] = "Connexion administrateur";
                     header('Location: ../index.php');
                 } elseif ($admin['admin'] == 0) {
                     $_SESSION['res'] = NULL;
-                    $_SESSION['res'] ="Connexion utilisateur";
+                    $_SESSION['res'] = "Connexion utilisateur";
                     header('Location: ../index.php');
                 } else {
                     $_SESSION['res'] = NULL;
