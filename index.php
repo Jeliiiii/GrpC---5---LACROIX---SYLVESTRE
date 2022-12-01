@@ -77,21 +77,6 @@ session_start();
     <ul class="sidenav" id="mobile-demo">
         <li><a href="index.php">Accueil</a></li>
         <?php if (isset($_SESSION['username'])) { ?>
-        <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
-        <li><a href="eliott-projects.php">Projets Eliott</a></li>
-        <li><a href="projets.php">Projets supplémentaires</a></li>
-        <?php } ?>
-
-        <?php if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) { ?>
-        <li><a href="admin/admin.php">Administration</a></li>
-        <?php } ?>
-
-        <?php if (isset($_SESSION['username'])) { ?>
-        <li><a href="action/deconnexion.php">Deconnexion</a></li>
-        <?php } ?>
-
-        <?php if (isset($_SESSION['username'])) { ?>
-        <li><a href="connexion.php">Connexion</a></li>
         <?php } ?>
     </ul>
 
