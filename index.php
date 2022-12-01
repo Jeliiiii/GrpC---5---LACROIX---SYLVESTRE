@@ -201,7 +201,7 @@ session_start();
                             placeholder="Votre Message:"></textarea>
                     </p>
                     <div class="button-env">
-                        <a href="" class="waves-effect waves-light btn" rel="nofollow" target="_blank"><i
+                        <a href="" class="waves-effect waves-light btn" target="_blank"><i
                                 class="material-icons left">done</i>Envoyer</a>
                     </div>
                 </form>
