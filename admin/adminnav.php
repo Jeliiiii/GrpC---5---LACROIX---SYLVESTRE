@@ -20,8 +20,9 @@
         </div>
         <div class="nav-content">
             <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#title-h1">Liste des utilisateurs</a></li>
-                <li class="tab"><a href="#projects">Liste des Projets</a></li>
+                <li class="tab"><a href="#ajouter">Ajouter utilisateur</a></li>
+                <li class="tab"><a href="#modifier">Modifier utilisateur</a></li>
+                <li class="tab"><a href="#retirer">Retirer utilisateur</a></li>
             </ul>
         </div>
     </nav>
