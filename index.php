@@ -188,9 +188,10 @@ session_start();
                             class="required email">
                     </p>
                     <select name="probleme" id="font_probleme">
-                        <option value="fichiers">Fichiers corrompus</option>
-                        <option value="bug">Bug divers</option>
-                        <option value="demarrage">Démarrage</option>
+                        <option value="basic">Sélectionnez l'objet:</option>
+                        <option value="bug">Problème avec le site</option>
+                        <option value="demande">Demande</option>
+                        <option value="idea">Idées</option>
                     </select>
                     <p>
                         <label for="description">Description :</label>
