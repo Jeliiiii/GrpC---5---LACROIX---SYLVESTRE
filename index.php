@@ -49,16 +49,16 @@ session_start();
                     <li><a href="eliott-projects.php">Projets Eliott</a></li>
                     <?php }?>
 
-                    <?php if (isset($_SESSION['username']) && isset($_SESSION['password']) && $_SESSION['admin']==1){ ?>
+                    <?php /*if (isset($_SESSION['username']) && isset($_SESSION['password']) && $_SESSION['admin']==1)*/{ ?>
                     <li><a href="admin/admin.php">Administration</a></li>
                     <?php } ?>
 
                     <?php if (isset($_SESSION['username']) && isset($_SESSION['password'])){ ?>
                     <li><a href="action/deconnexion.php">Deconnexion</a></li>
                     <?php } ?>
-
-                    <?php if (!isset($_SESSION['username']) && !isset($_SESSION['password']) && !isset($_SESSION['admin'])){ ?>
-                        <li><a href="action/Connexion.php">Connexion</a></li>
+                    
+                    <?php /*if (isset($_SESSION['username']) && isset($_SESSION['password']))*/{ ?>
+                        <li><a href="connexion.php">Connexion</a></li>
                     <?php } ?>
 
                 </ul>
@@ -80,10 +80,18 @@ session_start();
         <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
         <li><a href="eliott-projects.php">Projets Eliott</a></li>
         <?php } ?>
+
         <?php if (isset($_SESSION['username']) && isset($_SESSION['password']) && $_SESSION['admin']==1){ ?>
         <li><a href="admin/admin.php">Administration</a></li>
         <?php } ?>
+
+        <?php if (isset($_SESSION['username']) && isset($_SESSION['password'])){ ?>
         <li><a href="action/deconnexion.php">Deconnexion</a></li>
+        <?php } ?>
+
+        <?php if (isset($_SESSION['username']) && isset($_SESSION['password'])){ ?>
+            <li><a href="connexion.php">Connexion</a></li>
+        <?php } ?>
     </ul>
 
 
@@ -166,13 +174,13 @@ session_start();
                 alt="Image fond d'écran No Man's Sky planète et Vaisseau">
         </div>
         <div class="form-button">
-            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Formulaire</a>
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
         </div>
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h4>Formulaire de contact</h4>
-                <form method="post" enctype="text/plain">
+                <form method="post" action="action/mail.php" enctype="text/plain">
                     <p>
                         <label for="Nom">Nom</label> <input type="text" id="Nom" name="Nom" required
                             class="required text">
