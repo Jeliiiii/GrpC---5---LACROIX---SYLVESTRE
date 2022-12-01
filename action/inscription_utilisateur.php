@@ -9,7 +9,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     require "database.php";
     $reponse = " ";
 
-    if ($username !== "" && $email !== "" && $password !== ""&& $admin !== "") {
+    if ($username !== "" && $email !== "" && $password !== "" && $admin !== "") {
 
         if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])) {
             try {
@@ -19,11 +19,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $email = $_POST['email'];
 
-                if($_POST['admin']=="Non"){
-                    $admin =0;
-                }elseif($_POST['admin']=="Oui"){
-                    $admin=1;
-                }else{
+                if ($_POST['admin'] == "Non") {
+                    $admin = 0;
+                } elseif ($_POST['admin'] == "Oui") {
+                    $admin = 1;
+                } else {
                     header('Location: ../img/sortie/comment_ça_mon_reuf.png');
                 }
 
@@ -35,7 +35,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
                 try {
                     $reponse = $pdo->prepare('INSERT INTO `user`(`username`, `password`, `email`,`admin`) VALUES (?,?,?,?)');
-                    $reponse->execute(array($username, $password, $email,$admin));
+                    $reponse->execute(array($username, $password, $email, $admin));
                     $_SESSION['res'] = "Utilisateur ajouté";
                     header('Location: ../connexion.php');
                 } catch (\Throwable $th) {
