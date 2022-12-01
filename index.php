@@ -111,7 +111,7 @@ session_start();
                 <div class="col offset-s3 s3 offset-m3 m3 offset-l3 l3">
                     <div class="card" id="presentation">
                         <div class="card-image">
-                            <img src="img/global/sylvestre.jpg" alt="Image Matthieu SYLVESTRE">
+                            <img src="img/accueil/sylvestre.jpg" alt="Image Matthieu SYLVESTRE">
                             <span class="card-title">Matthieu SYLVESTRE</span>
                         </div>
                         <div class="card-content">
@@ -130,7 +130,7 @@ session_start();
                 <div class="col s3 m3 l3">
                     <div class="card" id="presentation2">
                         <div class="card-image">
-                            <img src="img/global/lacroix.jpeg" alt="Image Eliott LACROIX">
+                            <img src="img/accueil/lacroix.jpeg" alt="Image Eliott LACROIX">
                             <span class="card-title">Eliott LACROIX</span>
                         </div>
                         <div class="card-content">
@@ -156,15 +156,15 @@ session_start();
 
 
     <div class="carousel" id="projects">
-        <div class="carousel-item"><img src="img/global/prj-1.jpg" id="image-1"
+        <div class="carousel-item"><img src="img/accueil/prj-1.jpg" id="image-1"
                 alt="Image Site G.TECH 1 Dishonored 2 Gaming Campus"></div>
-        <div class="carousel-item"><img src="img/global/prj-2.jpg" id="image-2"
+        <div class="carousel-item"><img src="img/accueil/prj-2.jpg" id="image-2"
                 alt="Image Site G.TECH 1 Dishonored 2 Gaming Campus"></div>
-        <div class="carousel-item"><img src="img/global/prj-3.jpg" id="image-3"
+        <div class="carousel-item"><img src="img/accueil/prj-3.jpg" id="image-3"
                 alt="Image Site G.TECH 1 Dishonored 2 HTML Gaming Campus"></div>
-        <div class="carousel-item"><img src="img/global/prj-4.jpg" id="image-4"
+        <div class="carousel-item"><img src="img/accueil/prj-4.jpg" id="image-4"
                 alt="Image Site G.TECH 1 Dishonored 2 CSS Gaming Campus"></div>
-        <div class="carousel-item"><img src="img/global/prj-5.jpg" id="image-5"
+        <div class="carousel-item"><img src="img/accueil/prj-5.jpg" id="image-5"
                 alt="Image Site G.TECH 1 Dishonored 2 Contact Gaming Campus"></div>
         <p id="explaining-text">Voici des captures d'écran de notre dernier projet commun. Ce dernier portait sur le jeu
             Dishonored 2</p>
@@ -186,7 +186,7 @@ session_start();
                 <form method="post" action="action/mail.php">
                     <p>
                         <label for="email">Email:</label>
-                        <input type="email" placeholder="Entrez votre email:" name="email" required>
+                        <input type="email" id ="email" placeholder="Entrez votre email:" name="email" required>
                     </p>
                     <label for="email">Objet:</label>
                     <select name="probleme" id="font_probleme">

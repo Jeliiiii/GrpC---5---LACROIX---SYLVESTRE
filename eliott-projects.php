@@ -110,7 +110,7 @@ session_start();
 
     <div class="parallax-container" id="parallax2">
         <div class="parallax">
-            <img src="img/img-parallax1.jpg" alt="Image fond d'écran No Man's Sky stylisé">
+            <img src="img/global/img-parallax1.jpg" alt="Image fond d'écran No Man's Sky stylisé">
         </div>
     </div>
 
@@ -120,9 +120,9 @@ session_start();
             <div class="carousel-item"><img src="img/projetEliott/lamache2.jpg" id="lamache-logo-png" alt="Photo logo Lamache"></div>
             <div class="carousel-item"><img src="img/projetEliott/lamache1.jpg" id="lamache-bat"
                     alt="Photo deventure du Lycée/Ecole LaMache"></div>
-            <div class="carousel-item"><img src="img/projetEliott/gaming-campus2.jpg" alt="Image Logo Gaming Campus">
+            <div class="carousel-item"><img src="img/global/gaming-campus2.jpg" alt="Image Logo Gaming Campus">
             </div>
-            <div class="carousel-item"><img src="img/projetEliott/gaming-campus1.jpg" alt="Image Locaux Gaming Campus"></div>
+            <div class="carousel-item"><img src="img/global/gaming-campus1.jpg" alt="Image Locaux Gaming Campus"></div>
             <p>Voici mon projet scolaire:<br><br>
                 Mon lycée: LaMache.<br>
                 J'avais rejoint le lycée LaMache pour ma 1ère et ma Terminale,<br>
@@ -136,19 +136,19 @@ session_start();
 
     <div class="parallax-container" id="parallax3">
         <div class="parallax">
-            <img src="img/img-parallax5.jpg" alt="Image fond d'écran No Man's Sky stylisé">
+            <img src="img/global/img-parallax5.jpg" alt="Image fond d'écran No Man's Sky stylisé">
         </div>
     </div>
 
     <div class="gaming-project" id="gaming-project">
         <h2>Mon projet setup gaming</h2>
         <div class="carousel" id="project3">
-            <div class="carousel-item"><img src="img/nzxt-h1.png" alt="Boitier Nzxt H1 Mini ITX"></div>
-            <div class="carousel-item"><img src="img/mz1.png" alt="Souris Gaming rocket Jump ninja Xtrfy Mz1"></div>
-            <div class="carousel-item"><img src="img/akko-keyboard.png" alt="Clavier custom akko skin japon"></div>
-            <div class="carousel-item"><img src="img/screen-sam.png" alt="Ecran Samsung jeux vidéo">
+            <div class="carousel-item"><img src="img/projetEliott/nzxt-h1.png" alt="Boitier Nzxt H1 Mini ITX"></div>
+            <div class="carousel-item"><img src="img/projetEliott/mz1.png" alt="Souris Gaming rocket Jump ninja Xtrfy Mz1"></div>
+            <div class="carousel-item"><img src="img/projetEliott/akko-keyboard.png" alt="Clavier custom akko skin japon"></div>
+            <div class="carousel-item"><img src="img/projetEliott/screen-sam.png" alt="Ecran Samsung jeux vidéo">
             </div>
-            <div class="carousel-item"><img src="img/audient-id4.png" alt="Carte son audient id4 mk2">
+            <div class="carousel-item"><img src="img/projetEliott/audient-id4.png" alt="Carte son audient id4 mk2">
             </div>
             <p>Voici mon projet setup gaming:<br><br>
                 4 ans pour arriver à un tel résultat.<br>
@@ -162,7 +162,7 @@ session_start();
         </div>
     </div>
     <div class="parallax-container">
-        <div class="parallax"><img src="img/img-parallax2.jpg"
+        <div class="parallax"><img src="img/global/img-parallax2.jpg"
                 alt="Image fond d'écran No Man's Sky planète et Vaisseau">
         </div>
         <div class="form-button" id = 'contactus'>

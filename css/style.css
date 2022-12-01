@@ -125,3 +125,7 @@ h2 {
 .modal-content input{
     color: grey;
 }
+
+.parallax-container .modal .modal-content #email{
+    color: grey;
+}

@@ -12,7 +12,7 @@ session_start();
     <title>G.Tech 1 - Nos projets</title>
     <meta name="description"
         content="Nous allons vous parler de nos expériences, et nos projets au sein de l'école Gaming Campus.">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/logo-gc.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/global/logo-gc.png">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,7 @@ session_start();
     <div class="navbar-fixed">
         <nav class="nav-extended">
             <div class="nav-wrapper">
-                <a href="#brand-logo" class="brand-logo"><img src="img/logo-gc.png" alt="logo Gaming Campus"></a>
+                <a href="#brand-logo" class="brand-logo"><img src="img/global/logo-gc.png" alt="logo Gaming Campus"></a>
                 <a href="#mobile-demo" data-target="mobile-demo" class="sidenav-trigger"><i
                         class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -68,7 +68,7 @@ session_start();
 
     <div class="parallax-container" id="parallax1">
         <div class="parallax">
-            <img src="img/img-parallax1.jpg" alt="Image fond d'écran No Man's Sky stylisé">
+            <img src="img/global/img-parallax1.jpg" alt="Image fond d'écran No Man's Sky stylisé">
         </div>
         <h1>Préambule</h1>
         <div class="row">
@@ -90,11 +90,11 @@ session_start();
                 target="_blank">Ma chaine Twitch</a>
         </div>
         <div class="carousel" id="project1">
-            <div class="carousel-item"><img src="img/twitch.jpg" alt="Apparence profil Twitch matthieu">
+            <div class="carousel-item"><img src="img/projetMatthieu/twitch.jpg" alt="Apparence profil Twitch matthieu">
             </div>
-            <div class="carousel-item"><img src="img/discord.jpg" alt="Apparence discord matthieu"></div>
-            <div class="carousel-item"><img src="img/statistiques-chaine.jpg" alt="Statistiques chaine matthieu"></div>
-            <div class="carousel-item"><img src="img/profil-speedruncom.jpg" alt="profil speedrun.com matthieu"></div>
+            <div class="carousel-item"><img src="img/projetMatthieu/discord.jpg" alt="Apparence discord matthieu"></div>
+            <div class="carousel-item"><img src="img/projetMatthieu/statistiques-chaine.jpg" alt="Statistiques chaine matthieu"></div>
+            <div class="carousel-item"><img src="img/projetMatthieu/profil-speedruncom.jpg" alt="profil speedrun.com matthieu"></div>
             <p>Quelques images de mon projet et ses statistiques. <br> <br> Mon ambition: <br> - Monter encore en
                 statistiques <br> - Avoir une plus grande communauté et plus de records</p>
         </div>
@@ -102,20 +102,20 @@ session_start();
 
     <div class="parallax-container" id="parallax2">
         <div class="parallax">
-            <img src="img/img-parallax2.jpg" alt="Image fond d'écran No Man's Sky stylisé">
+            <img src="img/global/img-parallax2.jpg" alt="Image fond d'écran No Man's Sky stylisé">
         </div>
     </div>
 
     <div class="school-project" id="school-career">
         <h2>Mon parcours scolaire</h2>
         <div class="carousel" id="project2">
-            <div class="carousel-item"><img src="img/diderot1.jpg" alt="Photo logo Diderot"></div>
-            <div class="carousel-item"><img src="img/diderot2.jpg" alt="Photo deventure du Lycée Diderot"></div>
-            <div class="carousel-item"><img src="img/lombards1.jpg" alt="Photo logo Les Lombards"></div>
-            <div class="carousel-item"><img src="img/lombards2.jpg" alt="Photo deventure du Lycée Les Lombards"></div>
+            <div class="carousel-item"><img src="img/projetMatthieu/diderot1.jpg" alt="Photo logo Diderot"></div>
+            <div class="carousel-item"><img src="img/projetMatthieu/diderot2.jpg" alt="Photo deventure du Lycée Diderot"></div>
+            <div class="carousel-item"><img src="img/projetMatthieu/lombards1.jpg" alt="Photo logo Les Lombards"></div>
+            <div class="carousel-item"><img src="img/projetMatthieu/lombards2.jpg" alt="Photo deventure du Lycée Les Lombards"></div>
             <div class="carousel-item"><img src="img/global/gaming-campus2.jpg" alt="Image Logo Gaming Campus">
             </div>
-            <div class="carousel-item"><img src="img/gaming-campus1.jpg" alt="Image Locaux Gaming Campus"></div>
+            <div class="carousel-item"><img src="img/global/gaming-campus1.jpg" alt="Image Locaux Gaming Campus"></div>
             <p>Quelques images des lieux d'études que j'ai fréquenté. <br> <br> Mon parcours: <br> - 2 Baccalauréat (SI
                 , STI) au Lycée Denis Diderot - Langres <br> - BTS ( SNIR ) au Lycée Polyvalent Les Lombards<br> -
                 Préparation d'un bachelor jeux vidéos
