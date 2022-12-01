@@ -67,9 +67,11 @@ session_start();
             </div>
             <div class="nav-content">
                 <ul class="tabs tabs-transparent">
-                    <li class="tab"><a href="#title-h1">Présentation</a></li>
-                    <li class="tab"><a href="#projects">Projet commun</a></li>
-                    <li class="tab"><a href="#contactus">Contactez-nous</a></li>
+                    <li class="tab"><a href="#ajouter">Ajoutez un projet</a></li>
+                    <?php if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) { ?>
+                    <li class="tab"><a href="#modifier">Modifiez un projet</a></li>
+                    <li class="tab"><a href="#supprimer">Supprimez un projet</a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </nav>
@@ -99,25 +101,46 @@ session_start();
 
     <!--  
             Afficher la liste des projets actuellements enregistrés
-                Créer une déviation pour juste afficher le projet voulu
+            <div id="container">-->
+    <!--Zone de modification-->
+    <?php
+    $reponse = " ";
+    $reponse = $pdo->query('SELECT * FROM `projects`');
+    ?>
+    
+    <!--Récupérer d'un form les données à ajouter
+        CREER un nouveau projet
+        AJOUTER de nouvelles images avec le nom du projet-->
+    <form action="../action/ajout_projet.php" method="POST">
+        <h2 id=ajouter>Ajouter un projet</h2>
 
-            CREER un nouveau projet
-                AJOUTER de nouvelles images DANS UN DOSSIER avec le nom du projet
-                LIER le nom des images avec la page projet
-                Possibilité de MODIFIER un projet SI administrateur
-                Possibilité de SUPPRIMER un projet SI administrateur
-        -->
+        <label><b>Nom du projet</b></label><br>
+        <input type="text" placeholder="Entrer le nom du projet :" name="projectName" required>
 
+        <label><b>Ajouter une image</b></label><br>
+        <input type="file" placeholder="Choisissez une image :" name="img" required>
 
+        <label><b>Ajouter un texte</b></label><br>
+        <input type="text" placeholder="Description :" name="description" required>
 
-
-
-
-
-
-
-
-
+        <input type="submit" id='submit' value='Ajoutez votre projet'>
+        </div>
+    </form>
+<?php
+    require "action/afficher_project.php";
+    foreach($data_project as $project){ ?>
+<div class="bloc_project">
+    <h3><?php echo $project['name'] ?></h3>
+    <from method="post" action = "action/majProject.php">
+        <input type='hidden' name="id" value="<?php echo $project['id'] ?>">
+        <input type='text' name='name' value="<?php echo $project['name'] ?>">
+        <button type = 'submit'> Changer le nom du projet </button>
+    </form>
+    <form method="post" action= "action/remove_project.php">
+        <input type="hidden" name="id" value="<?php echo $project['id'] ?>">
+        <button type = 'submit'> Supprimer le projet </button>
+    <?php } ?>
+</div>
 </body>
 
 </html>

@@ -80,7 +80,6 @@
         <?php
         }
         ?>
-  </div>
   </select><br>
 
   <label><b>Mot de passe</b></label>
