@@ -50,7 +50,7 @@ session_start();
     </ul>
 
     <?php
-    echo "<h1><mark>";
+    echo "<mark><h1>";
     if (isset($_SESSION['res'])) {
         echo $_SESSION['res'];
         $_SESSION['res'] = " ";
