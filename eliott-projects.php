@@ -39,6 +39,9 @@ session_start();
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
                     <li><a href="eliott-projects.php">Projets Eliott</a></li>
+                    <?php if (isset($_SESSION['username'])) { ?>
+                    <li><a href="action/deconnexion.php">Deconnexion</a></li>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="nav-content">
@@ -57,6 +60,9 @@ session_start();
         <li><a href="index.php">Accueil</a></li>
         <li><a href="matthieu-projects.php">Projets Matthieu</a></li>
         <li><a href="eliott-projects.php">Projets Eliott</a></li>
+        <?php if (isset($_SESSION['username'])) { ?>
+        <li><a href="action/deconnexion.php">Deconnexion</a></li>
+        <?php } ?>
     </ul>
 
     <div class="parallax-container" id="parallax1">
