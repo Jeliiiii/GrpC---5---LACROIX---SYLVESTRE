@@ -178,7 +178,7 @@ session_start();
         <div class="parallax"><img src="img/global/img-parallax2.jpg"
                 alt="Image fond d'écran No Man's Sky planète et Vaisseau">
         </div>
-        <div class="form-button" id = 'contactus'>
+        <div class="form-button" id='contactus'>
             <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
         </div>
         <!-- Modal Structure -->
@@ -188,7 +188,7 @@ session_start();
                 <form method="post" action="action/mail.php">
                     <p>
                         <label for="email">Email :</label>
-                        <input type="email" id ="email" placeholder="Entrez votre email :" name="email" required>
+                        <input type="email" id="email" placeholder="Entrez votre email :" name="email" required>
                     </p>
                     <label for="email">Objet :</label>
                     <select name="probleme" id="font_probleme">

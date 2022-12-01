@@ -62,7 +62,7 @@ session_start();
         <!-- zone de connexion -->
 
         <form action="action/connexion_utilisateur.php" method="POST">
-            <h2 id = 'title-h1'>Connexion</h2>
+            <h2 id='title-h1'>Connexion</h2>
 
             <label><b>Nom d'utilisateur</b></label>
             <input type="text" placeholder="Entrer le nom d'utilisateur :" name="username" required>
@@ -79,7 +79,7 @@ session_start();
         <!-- zone de connexion -->
 
         <form action="action/inscription_utilisateur.php" method="POST">
-            <h2 id = 'title-h2'>Inscription</h2>
+            <h2 id='title-h2'>Inscription</h2>
 
             <label><b>Email</b></label>
             <input type="email" placeholder="Entrez votre email :" name="email" required>

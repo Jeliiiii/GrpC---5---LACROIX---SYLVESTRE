@@ -10,7 +10,7 @@
 <div class="navbar-fixed">
     <nav class="nav-extended">
         <div class="nav-wrapper">
-            <a href="#brand-logo" class="brand-logo"><img src="../img/logo-gc.png" alt="Logo Gaming Campus"></a>
+            <a href="#brand-logo" class="brand-logo"><img src="../img/global/logo-gc.png" alt="Logo Gaming Campus"></a>
             <a href="#mobile-demo" data-target="mobile-demo" class="sidenav-trigger"><i
                     class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">

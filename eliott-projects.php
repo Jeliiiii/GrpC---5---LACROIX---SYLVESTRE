@@ -102,7 +102,8 @@ session_start();
                     allowfullscreen></iframe></div>
             <div class="carousel-item"><img src="img/projetEliott/img-guitar1.png"
                     alt="Charvel Dk-24 Nova 6 Signature Angel Vivaldi"></div>
-            <div class="carousel-item"><img src="img/projetEliott/amp1.png" alt="Tim Henson sim amp collection Neural DSP"></div>
+            <div class="carousel-item"><img src="img/projetEliott/amp1.png"
+                    alt="Tim Henson sim amp collection Neural DSP"></div>
             <p>Quelques images et vidéos de mon projet. <br> <br> <br>
                 Mon équipement: <br> <br>
                 - Guitare : Charvel Dk24 Nova 6 Signature Angel Vivaldi <br>
@@ -119,7 +120,8 @@ session_start();
     <div class="school-project" id="school-project">
         <h2>Mon projet scolaire</h2>
         <div class="carousel" id="project2">
-            <div class="carousel-item"><img src="img/projetEliott/lamache2.jpg" id="lamache-logo-png" alt="Photo logo Lamache"></div>
+            <div class="carousel-item"><img src="img/projetEliott/lamache2.jpg" id="lamache-logo-png"
+                    alt="Photo logo Lamache"></div>
             <div class="carousel-item"><img src="img/projetEliott/lamache1.jpg" id="lamache-bat"
                     alt="Photo deventure du Lycée/Ecole LaMache"></div>
             <div class="carousel-item"><img src="img/global/gaming-campus2.jpg" alt="Image Logo Gaming Campus">
@@ -146,8 +148,10 @@ session_start();
         <h2>Mon projet setup gaming</h2>
         <div class="carousel" id="project3">
             <div class="carousel-item"><img src="img/projetEliott/nzxt-h1.png" alt="Boitier Nzxt H1 Mini ITX"></div>
-            <div class="carousel-item"><img src="img/projetEliott/mz1.png" alt="Souris Gaming rocket Jump ninja Xtrfy Mz1"></div>
-            <div class="carousel-item"><img src="img/projetEliott/akko-keyboard.png" alt="Clavier custom akko skin japon"></div>
+            <div class="carousel-item"><img src="img/projetEliott/mz1.png"
+                    alt="Souris Gaming rocket Jump ninja Xtrfy Mz1"></div>
+            <div class="carousel-item"><img src="img/projetEliott/akko-keyboard.png"
+                    alt="Clavier custom akko skin japon"></div>
             <div class="carousel-item"><img src="img/projetEliott/screen-sam.png" alt="Ecran Samsung jeux vidéo">
             </div>
             <div class="carousel-item"><img src="img/projetEliott/audient-id4.png" alt="Carte son audient id4 mk2">
@@ -167,7 +171,7 @@ session_start();
         <div class="parallax"><img src="img/global/img-parallax2.jpg"
                 alt="Image fond d'écran No Man's Sky planète et Vaisseau">
         </div>
-        <div class="form-button" id = 'contactus'>
+        <div class="form-button" id='contactus'>
             <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
         </div>
         <!-- Modal Structure -->
@@ -177,7 +181,7 @@ session_start();
                 <form method="post" action="action/mail.php">
                     <p>
                         <label for="email">Email :</label>
-                        <input type="email" id ="email" placeholder="Entrez votre email :" name="email" required>
+                        <input type="email" id="email" placeholder="Entrez votre email :" name="email" required>
                     </p>
                     <label for="email">Objet :</label>
                     <select name="probleme" id="font_probleme">
@@ -209,7 +213,7 @@ session_start();
     <script src="js/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <!--<script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>-->
 </body>
 
 </html>

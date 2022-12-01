@@ -95,8 +95,10 @@ session_start();
             <div class="carousel-item"><img src="img/projetMatthieu/twitch.jpg" alt="Apparence profil Twitch matthieu">
             </div>
             <div class="carousel-item"><img src="img/projetMatthieu/discord.jpg" alt="Apparence discord matthieu"></div>
-            <div class="carousel-item"><img src="img/projetMatthieu/statistiques-chaine.jpg" alt="Statistiques chaine matthieu"></div>
-            <div class="carousel-item"><img src="img/projetMatthieu/profil-speedruncom.jpg" alt="profil speedrun.com matthieu"></div>
+            <div class="carousel-item"><img src="img/projetMatthieu/statistiques-chaine.jpg"
+                    alt="Statistiques chaine matthieu"></div>
+            <div class="carousel-item"><img src="img/projetMatthieu/profil-speedruncom.jpg"
+                    alt="profil speedrun.com matthieu"></div>
             <p>Quelques images de mon projet et ses statistiques. <br> <br> Mon ambition: <br> - Monter encore en
                 statistiques <br> - Avoir une plus grande communauté et plus de records</p>
         </div>
@@ -112,9 +114,11 @@ session_start();
         <h2>Mon parcours scolaire</h2>
         <div class="carousel" id="project2">
             <div class="carousel-item"><img src="img/projetMatthieu/diderot1.jpg" alt="Photo logo Diderot"></div>
-            <div class="carousel-item"><img src="img/projetMatthieu/diderot2.jpg" alt="Photo deventure du Lycée Diderot"></div>
+            <div class="carousel-item"><img src="img/projetMatthieu/diderot2.jpg"
+                    alt="Photo deventure du Lycée Diderot"></div>
             <div class="carousel-item"><img src="img/projetMatthieu/lombards1.jpg" alt="Photo logo Les Lombards"></div>
-            <div class="carousel-item"><img src="img/projetMatthieu/lombards2.jpg" alt="Photo deventure du Lycée Les Lombards"></div>
+            <div class="carousel-item"><img src="img/projetMatthieu/lombards2.jpg"
+                    alt="Photo deventure du Lycée Les Lombards"></div>
             <div class="carousel-item"><img src="img/global/gaming-campus2.jpg" alt="Image Logo Gaming Campus">
             </div>
             <div class="carousel-item"><img src="img/global/gaming-campus1.jpg" alt="Image Locaux Gaming Campus"></div>
@@ -128,7 +132,7 @@ session_start();
         <div class="parallax"><img src="img/global/img-parallax2.jpg"
                 alt="Image fond d'écran No Man's Sky planète et Vaisseau">
         </div>
-        <div class="form-button" id = 'contactus'>
+        <div class="form-button" id='contactus'>
             <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contactez-nous</a>
         </div>
         <!-- Modal Structure -->
@@ -138,7 +142,7 @@ session_start();
                 <form method="post" action="action/mail.php">
                     <p>
                         <label for="email">Email :</label>
-                        <input type="email" id ="email" placeholder="Entrez votre email :" name="email" required>
+                        <input type="email" id="email" placeholder="Entrez votre email :" name="email" required>
                     </p>
                     <label for="email">Objet :</label>
                     <select name="probleme" id="font_probleme">
@@ -169,7 +173,7 @@ session_start();
     <script src="js/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <!--<script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>-->
 </body>
 
 </html>

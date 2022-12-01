@@ -3,7 +3,7 @@ html {
 }
 
 body{
-    background-image: url("../img/img-parallax3.jpg");
+    background-image: url("../img/global/img-parallax3.jpg");
     background-size: cover;
     margin: 0%;
     background-attachment: fixed;
