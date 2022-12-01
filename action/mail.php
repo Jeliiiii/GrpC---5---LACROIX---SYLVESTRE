@@ -14,10 +14,4 @@ if(mail($envoi, $problem,$description)){
 }else{
     echo "error";
 }
-
-
-
-
-
-
 ?>
